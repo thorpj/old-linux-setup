@@ -1,0 +1,16 @@
+Linux Applications - Store application files and apt-get script with y/n for each package). Have default y. Automatically update apps not in apt repos. Also auto update script for apt install
+	
+Windows Applications - automatically update install files and automate installation
+
+Linux-Scripts - Useful bash scripts 
+	Initial install folder: Configures install, edits .bashrc (try to make it so i don't need to update the code for this when I add a new script). 
+
+
+Windows-Scripts - Useful powershell scripts
+
+OS-Setup - Scripts to set up  a device after a fresh OS install
+
+===========
+To Do
+==========
+* Automatic git push script
