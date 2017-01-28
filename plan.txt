@@ -1,27 +1,48 @@
 === Ongoing ===
-* (y/n) wherever possible
-
-Linux Applications - Store application files and apt-get script with y/n for each package). Have default y. Automatically update apps not in apt repos. Also auto update script for apt install
-	
-Windows Applications - automatically update install files and automate installation
+* (y/n) wherever possible with enter=y
+  * Show all the choices first (with a '| less' page) and then ask if default yes, or configure individually.
 
 Linux-Scripts - Useful bash scripts 
 
 
+Linux Applications - Use symlinks or something so that these apps can stay in local git repo, and then be updated there, then pushed to remote git repo
+* Store app files
+* autoupdate apps in repo
+
 
 Windows-Scripts - Useful powershell scripts
 
+
+Windows Applications - automatically update install files and automate installation
+* Store app files
+* autoupdate apps in repo
+
+
 OS-Setup - Scripts to set up  a device after a fresh OS install
   == Linux ==
-* script to clone other necessary repos (depending on OS). 
-* Script to add entries to bashrc
+DONE script to clone other necessary repos (depending on OS).
+IMP Script to add entries to bashrc
   * Build it so that it doesn't require updates when more scripts are added to ../Linux-Scripts or ../Windows-Scripts
-* Script to configure install 
-  Windows
+IMP Script to configure install
+IMP apt script
+    * Auto update code in apt install script
+* apt package list.txt
+IMP installer script for apps not in apt repos
+  
+  == Windows == 
+
+
 
 ===========
 To Do
-==========
+===========
 DONE Automatic git push script
 
 
+===========
+Side notes
+===========
+* One python app that does everything
+
+=============================
+One extra file per OS
