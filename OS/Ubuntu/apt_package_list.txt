@@ -1,3 +1,0 @@
-gimp y
-vlc n
-
