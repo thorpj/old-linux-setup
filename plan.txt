@@ -24,6 +24,8 @@ DONE script to clone other necessary repos (depending on OS).
 IMP Script to add entries to bashrc
   * Build it so that it doesn't require updates when more scripts are added to ../Linux-Scripts or ../Windows-Scripts
 IMP Script to configure install
+    * Gnome extensions
+    * Network config (/etc/network/interfaces)
 IMP apt script
     * Auto update code in apt install script
 * apt package list.txt
@@ -42,7 +44,6 @@ DONE Automatic git push script
 ===========
 Side notes
 ===========
-* One python app that does everything
 
 =============================
 One extra file per OS

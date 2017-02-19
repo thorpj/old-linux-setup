@@ -4,6 +4,8 @@ if [[ $(/usr/bin/id -u) -ne 0 ]]; then
     echo "Exiting. Please run script as root"
     exit
 fi
+cd /home/$SUDO_USER/OS-Setup/
+
 printf "\n"
 if dpkg --get-selections | grep -q "^curl[[:space:]]*install$" >/dev/null; then
     echo "Info: Curl is already installed"
@@ -17,7 +19,7 @@ select_distro ()
 {
     printf "\n"
     PS3='Select your OS: '
-    options=("Linux")
+    options=("Ubuntu")
     select opt in "${options[@]}"
     do
         case $opt in
@@ -67,8 +69,9 @@ git_clone ()
         read -p "Email: " email
         curl -u "$username:$password" --data '{"title":"$email","key":"$ssh_key"}' https://api.github.com/user/keys
     fi
-    git clone git@github.com:thorpj/Linux-Applications.git
-    git clone git@github.com:thorpj/Linux-Scripts.git
+    cd /home/$USER/
+#    git clone git@github.com:thorpj/Linux-Applications.git
+#    git clone git@github.com:thorpj/Linux-Scripts.git
 }
 
 
