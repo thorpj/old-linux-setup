@@ -44,6 +44,7 @@ apt_list=$'\n' read -d '' -r -a lines < apt_package_list.txt
 for app in "${lines[@]}"
 do
 echo $app
+#sudo apt install $app
 done
 #
 #array=( one two three )
