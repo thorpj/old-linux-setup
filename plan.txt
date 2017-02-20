@@ -39,7 +39,7 @@ IMP installer script for apps not in apt repos
 To Do
 ===========
 DONE Automatic git push script
-
+Add public SSH keys to authorized_keys
 
 ===========
 Side notes

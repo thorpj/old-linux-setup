@@ -32,6 +32,16 @@ apt_install ()
 #    apt_list=';' read -r id string <<< "$apt_list"
 
 apt_list=$'\n' read -d '' -r -a lines < apt_package_list.txt
+for app in "${lines[@]}"
+do
+    if [[ ${app:0:1} == "#" ]]
+        then
+            :
+        else
+            sudo apt install $app
+    fi
+done
+
 #
 ##    echo ${lines[@]}
 #    for app in "${lines[@]}"
@@ -41,11 +51,7 @@ apt_list=$'\n' read -d '' -r -a lines < apt_package_list.txt
 ##        echo ${app_info_arr[0]}
 #    done
 #echo ${lines[1]}
-for app in "${lines[@]}"
-do
-echo $app
-#sudo apt install $app
-done
+
 #
 #array=( one two three )
 #for i in "${array[@]}"
@@ -66,13 +72,14 @@ done
 #    done
 }
 
+authorized_keys ()
+{
+    cat 'authorized_keys.txt' >> $HOME/.ssh/authorized_keys
+}
 
 edit_bashrc ()
 {
-    cat bashrc_alises.txt >> /home/$SUDO_USER/.bashrc
-
-
-
+    cat 'bashrc_alises.txt' >> /home/$SUDO_USER/.bashrc
 }
 
 
@@ -90,6 +97,18 @@ nonapt_install ()
 
 Main ()
 {
+#    askyesno "Install apt apps? " true
+#    if [ "$result" = true ]; then
+#        apt_install
+#    fi
+#    askyesno "Append contents of authorized_keys.txt to ~/.ssh/authorized_keys? " true
+#    if [ "$result" = true ]; then
+#        authorized_keys
+#    fi
+#    askyesno "Append contents of bashrc_alises.txt to ~/.bashrc? " true
+#    if [ "$result" = true ]; then
+#        edit_bashrc
+#    fi
     apt_install
 }
 Main
