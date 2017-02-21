@@ -14,4 +14,5 @@ echo "alias ssh_interactive='$HOME/Git/Linux-Scripts/ssh_interactive.sh'" >> $HO
 echo "alias wget_unzip_interactive='$HOME/Git/Linux-Scripts/wget_unzip_interactive.sh'" >> $HOME/.bashrc
 echo "alias unzip_interactive='$HOME/Git/Linux-Scripts/unzip_interactive.sh'" >> $HOME/.bashrc
 echo "alias wget_interactive='$HOME/Git/Linux-Scripts/wget_interactive.sh'" >> $HOME/.bashrc
-
+echo "alias unzip_tar_gz='tar -xzf'" >> $HOME/.bashrc
+echo "alias directory_list='$HOME/Git/Linux-Scripts/directory_list.sh'" >> $HOME/.bashrc

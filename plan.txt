@@ -30,8 +30,8 @@ IMP Script to configure install
 DONE apt script
 DONE apt package list.txt
 IMP installer script for apps not in apt repos
-* Once finished, tell user to view apt_package list to see what they should add to the taskbar
-  == Windows == 
+* Once finished, tell user to view apt_package_list.txt and nonapt_package_list.txt list to see what they should add to the taskbar
+  == Windows ==
 
 
 
