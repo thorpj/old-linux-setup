@@ -1,0 +1,9 @@
+App         Version
+====================
+Franz	    4.0.4
+Pycharm     2016.3.2
+Phpstorm    2016.3.2
+Rubymine    2016.3.1
+Webstorm    2016.3.3
+Clion       2016.3.3
+
