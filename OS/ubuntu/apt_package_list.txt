@@ -17,3 +17,4 @@ htop
 playonlinux
 steam
 tmux
+nautilus-dropbox

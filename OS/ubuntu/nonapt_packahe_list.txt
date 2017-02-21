@@ -10,5 +10,4 @@ libpng12-0
 spotify
 visual-studio-code
 google-chrome
-dropbox
 tmuxifier
