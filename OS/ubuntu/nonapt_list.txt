@@ -5,8 +5,8 @@ webstorm
 rubymine
 clion
 discord
+libpng12-0
 wps office
-	libpng12-0
 spotify
 visual studio code
 google chrome
