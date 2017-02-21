@@ -4,7 +4,7 @@ if [[ $(/usr/bin/id -u) -ne 0 ]]; then
     echo "Exiting. Please run script as root"
     exit
 fi
-cd /home/$SUDO_USER/Git/OS-Setup/OS/Ubuntu
+cd /home/$SUDO_USER/Git/OS-Setup/OS/ubuntu
 askyesno ()
 {
     question=$1
@@ -29,48 +29,20 @@ askyesno ()
 
 apt_install ()
 {
-#    apt_list=';' read -r id string <<< "$apt_list"
+    apt_list=$'\n' read -d '' -r -a lines < apt_package_list.txt
 
-apt_list=$'\n' read -d '' -r -a lines < apt_package_list.txt
-for app in "${lines[@]}"
-do
-    if [[ ${app:0:1} == "#" ]]
-        then
-            :
-        else
-            sudo apt install $app
-    fi
+    for app in "${lines[@]}"
+    do
+        if [[ ${app:0:1} == "#" ]]
+            then
+                :
+            else
+                echo $app
+                sudo apt install $app
+        fi
 done
-
-#
-##    echo ${lines[@]}
-#    for app in "${lines[@]}"
-#    do
-#        echo $app
-##        IFS=' ' read -a app_info_arr <<< "$app"
-##        echo ${app_info_arr[0]}
-#    done
-#echo ${lines[1]}
-
-#
-#array=( one two three )
-#for i in "${array[@]}"
-#do
-#echo $i
-#done
-
-
-
-#    echo ${app_info_arr[@]}
-
-#    for app in $apt_list
-#    do
-#        askyesno "Install?" true
-#        if [ "$result" = true ]; then
-#            apt install $app
-#        fi
-#    done
 }
+
 
 authorized_keys ()
 {
@@ -109,7 +81,6 @@ Main ()
 #    if [ "$result" = true ]; then
 #        edit_bashrc
 #    fi
-    apt_install
 }
 Main
 

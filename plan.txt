@@ -17,18 +17,18 @@ Windows Applications - automatically update install files and automate installat
 * Store app files
 * autoupdate apps in repo
 
+===================================
 
 OS-Setup - Scripts to set up  a device after a fresh OS install
   == Linux ==
 DONE script to clone other necessary repos (depending on OS).
-IMP Script to add entries to bashrc
+DONE Script to add entries to bashrc
   * Build it so that it doesn't require updates when more scripts are added to ../Linux-Scripts or ../Windows-Scripts
 IMP Script to configure install
     * Gnome extensions
     * Network config (/etc/network/interfaces)
-IMP apt script
-    * Auto update code in apt install script
-* apt package list.txt
+DONE apt script
+DONE apt package list.txt
 IMP installer script for apps not in apt repos
   
   == Windows == 

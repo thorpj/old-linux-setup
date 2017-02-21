@@ -1,3 +1,4 @@
-gimp y
-vlc n
+gimp
+vlc
+#don't-install
 
