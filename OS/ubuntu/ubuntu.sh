@@ -54,6 +54,10 @@ edit_bashrc ()
     cat 'bashrc_alises.txt' >> /home/$SUDO_USER/.bashrc
 }
 
+nonapt_install ()
+{
+    :
+}
 
 configuration ()
 {
@@ -61,10 +65,7 @@ configuration ()
 }
 
 
-nonapt_install ()
-{
-    :
-}
+
 
 
 Main ()
