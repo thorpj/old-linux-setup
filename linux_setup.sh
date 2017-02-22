@@ -4,6 +4,14 @@ if [[ $(/usr/bin/id -u) -ne 0 ]]; then
     echo "Exiting. Please run script as root"
     exit
 fi
+if [ "$(uname -m)" = "x86_64" ]
+    then
+        :
+    else
+        echo "32bit systems are not supported... exiting..."
+        exit
+fi
+
 cd /home/$SUDO_USER/OS-Setup/
 
 printf "\n"

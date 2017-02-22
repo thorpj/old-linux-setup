@@ -6,6 +6,7 @@ fi
 url="https://discordapp.com/api/download?platform=linux&format=deb"
 app="discord"
 filename=$(basename "$url")
+echo $filename
 dldir="/home/$SUDO_USER/.temp/"
 working_dir=$(pwd)
 cd /home/$SUDO_USER/.temp/ && wget -O discord.deb $url
@@ -15,6 +16,7 @@ if [ $error = "yes" ]
     then
         echo '$app failed to install'
         echo '$app failed to install' >> /home/$SUDO_USER/Git/OS-Setup/OS/ubuntu/log.txt
+        exit
     else
         echo '$app has been installed'
         echo '$app has been installed' >> /home/$SUDO_USER/Git/OS-Setup/OS/ubuntu/log.txt
