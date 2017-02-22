@@ -1,0 +1,3 @@
+$app has been installed
+$app has been installed
+$app has been installed

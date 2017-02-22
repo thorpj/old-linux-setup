@@ -10,6 +10,12 @@ dldir="/home/$SUDO_USER/.temp/"
 wget $url -P $dldir
 sudo mkdir /opt/$app
 tar -xzf $dldir/$filename -C /opt/$app/
-/opt/$app/bin/$app.sh
-echo '$app has been installed'
-echo '$app has been installed' >> /home/$SUDO_USER/Git/OS-Setup/OS/ubuntu/log.txt
+/opt/$app/bin/$app.sh || error="yes"
+if [ $error = "yes" ]
+    then
+        echo '$app failed to install'
+        echo '$app failed to install' >> /home/$SUDO_USER/Git/OS-Setup/OS/ubuntu/log.txt
+    else
+        echo '$app has been installed'
+        echo '$app has been installed' >> /home/$SUDO_USER/Git/OS-Setup/OS/ubuntu/log.txt
+fi
