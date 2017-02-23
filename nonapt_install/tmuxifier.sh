@@ -32,3 +32,5 @@ git clone https://github.com/jimeh/tmuxifier.git /home/$SUDO_USER/.tmuxifier
 echo 'export PATH="$HOME/.tmuxifier/bin:$PATH"' >> /home/$SUDO_USER/.bashrc
 # echo 'export PATH="$HOME/.tmuxifier/bin:$PATH"' >> /home/$SUDO_USER/.profile
 echo 'eval "$(tmuxifier init -)"' >> /home/$SUDO_USER/.profile
+echo "tmuxa='tmuxifier load-window four_squares'" >> /home/$SUDO_USER/.bashrc
+echo "tmuxb='tmuxifier load-window two_squares'" >> /home/$SUDO_USER/.bashrc
