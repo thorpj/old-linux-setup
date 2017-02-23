@@ -21,7 +21,6 @@ error ()
 
 dldir="/home/$SUDO_USER/.temp/"
 
-
 dep_1="ttf-mscorefonts-installer"
 dep_1_error="no"
 sudo apt install $dep_1 || dep_1_error="yes"

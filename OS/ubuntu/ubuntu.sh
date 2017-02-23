@@ -29,14 +29,22 @@ askyesno ()
 
 apt_install ()
 {
+    sudo apt update
     apt_list=$'\n' read -d '' -r -a lines < apt_package_list.txt
-
     for app_apt in "${lines[@]}"
     do
         if [[ ${app:0:1} == "#" ]]
             then
                 :
             else
+                if [ $app == "google-chrome-stable" ]
+                    then
+                        wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+                        sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+                        sudo apt update
+                    else
+                        :
+                fi
                 sudo apt install $app_apt || echo '$app failed to install' >> /home/$SUDO_USER/Git/OS-Setup/OS/ubuntu/log.txt
         fi
 done

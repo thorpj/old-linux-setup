@@ -6,8 +6,6 @@ rubymine
 clion
 discord
 wps-office
-libpng12-0
 spotify
 visual-studio-code
-google-chrome
 tmuxifier

@@ -18,3 +18,4 @@ playonlinux
 steam
 tmux
 nautilus-dropbox
+google-chrome-stable

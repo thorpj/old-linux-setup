@@ -31,6 +31,9 @@ DONE apt script
 DONE apt package list.txt
 IMP installer script for apps not in apt repos
 * Once finished, tell user to view apt_package_list.txt and nonapt_package_list.txt list to see what they should add to the taskbar
+* Delete files from ~/.temp
+* POST INSTALL NOTES
+    * How to setup tmuxifier
   == Windows ==
 
 
