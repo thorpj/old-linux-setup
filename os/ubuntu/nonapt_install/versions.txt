@@ -1,0 +1,13 @@
+App         Version
+====================
+franz           	    4.0.4
+pycharm                 2016.3.2
+phpstorm                2016.3.2
+rubymine                2016.3.1
+webstorm                2016.3.3
+clion                   2016.3.3
+discord                 0.0.1
+visual-studio-code      1.9.1-14
+wps-office              10.2.0.5820
+tmuxifier               0.12.2
+spotify                 

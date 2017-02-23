@@ -1,0 +1,11 @@
+franz
+pycharm
+phpstorm
+webstorm
+rubymine
+clion
+discord
+wps-office
+spotify
+visual-studio-code
+tmuxifier
