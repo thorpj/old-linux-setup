@@ -103,16 +103,16 @@ nonapt_install ()
 
 gnome_install ()
 {
-    gnome_version=$(gnome-shell --version)
-    gnome_version=${gnome_version:12:4}
     error_occurred="no"
-    python2 /home/$SUDO_USER/Git/OS-Setup/os/ubuntugnome-shell-extensions.py || error_occurred="yes"
+    python2 /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/gnome-shell-extensions.py || error_occurred="yes"
     error "gnome-shell-extensions" $error_occurred
 }
 
 configuration ()
 {
-
+    sudo chown root:root /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/configuration/extend_sudo_timeout
+    sudo chmod 0440 /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/configuration/extend_sudo_timeout
+    sudo cp /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/configuration/extend_sudo_timeout /etc/sudoers.d/
 
 }
 
@@ -126,6 +126,7 @@ cleanup ()
         * How to setup tmuxifier
     * gnome extensions need to be configured
     """
+    sudo rm /etc/sudoers.d/extend_sudo_timeout
 }
 
 

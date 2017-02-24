@@ -1,28 +1,2 @@
-===== Gnome extensions =====
-url_part="https://extensions.gnome.org"
-
-Name                    id      uuid                                                            download_url
-|=======================|=======================================================================|==========
-alternate-tab           15      alternate-tab@gnome-shell-extensions.gcampax.github.com         /download-extension/alternate-tab@gnome-shell-extensions.gcampax.github.com.shell-extension.zip?version_tag=5204
-applications-menu       6       apps-menu@gnome-shell-extensions.gcampax.github.com             /download-extension/apps-menu@gnome-shell-extensions.gcampax.github.com.shell-extension.zip?version_tag=5320
-caffeine                517
-drop-down-terminal      442
-media-player-indicator  55
-netspeed                104
-places-status-indicator 8
-quick-close-in-overview 352
-removable-drive-menu    7
-shutdowntimer           792
-steal-my-focus          234
-topicons-plus           1031
-dash-to-dock            307
-
-wget -O $name.zip "$url_part$download_url" -P /home/$SUDO_USER/.temp
-mkdir -p "/home/$SUDO_USER/.local/share/gnome-shell/extensions/$uuid"
-unzip -op /home/$SUDO_USER/.temp/$name.zip -d $uuid
-
-
 Network config
 
-
-https://extensions.gnome.org/extension-info/?pk=6&shell_version=3.18

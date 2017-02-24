@@ -13,7 +13,10 @@ for id in id_list:
     download_url = data['download_url']
     download_url = "https://extensions.gnome.org" + download_url
     uuid = data['uuid']
-    username = getpass.getuser()
+    if os.environ.has_key('SUDO_USER'):
+        username = os.environ['SUDO_USER']
+    else:
+        username = os.environ['USER']
     fileName = "/home/%s/.temp/%s" % (username, id+".zip")
     downloadFile = urllib.URLopener()
     downloadFile.retrieve(url, fileName)
@@ -22,3 +25,4 @@ for id in id_list:
     zip_ref = zipfile.ZipFile(fileName, 'r')
     zip_ref.extractall(targetDir)
     zip_ref.close()
+    
