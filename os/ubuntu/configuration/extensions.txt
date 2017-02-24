@@ -1,0 +1,14 @@
+name id download_url uuid
+AlternateTab 15 /download-extension/alternate-tab@gnome-shell-extensions.gcampax.github.com.shell-extension.zip?version_tag=5204 alternate-tab@gnome-shell-extensions.gcampax.github.com
+Applications Menu 6 /download-extension/apps-menu@gnome-shell-extensions.gcampax.github.com.shell-extension.zip?version_tag=5320 apps-menu@gnome-shell-extensions.gcampax.github.com
+Caffeine 517 /download-extension/caffeine@patapon.info.shell-extension.zip?version_tag=6363 caffeine@patapon.info
+Drop Down Terminal 442 /download-extension/drop-down-terminal@gs-extensions.zzrough.org.shell-extension.zip?version_tag=6546 drop-down-terminal@gs-extensions.zzrough.org
+Media player indicator 55 /download-extension/mediaplayer@patapon.info.shell-extension.zip?version_tag=6570 mediaplayer@patapon.info
+NetSpeed 104 /download-extension/netspeed@hedayaty.gmail.com.shell-extension.zip?version_tag=6097 netspeed@hedayaty.gmail.com
+Places Status Indicator 8 /download-extension/places-menu@gnome-shell-extensions.gcampax.github.com.shell-extension.zip?version_tag=5210 places-menu@gnome-shell-extensions.gcampax.github.com
+Quick Close in Overview 352 /download-extension/middleclickclose@paolo.tranquilli.gmail.com.shell-extension.zip?version_tag=6247 middleclickclose@paolo.tranquilli.gmail.com
+Removable Drive Menu 7 /download-extension/drive-menu@gnome-shell-extensions.gcampax.github.com.shell-extension.zip?version_tag=5207 drive-menu@gnome-shell-extensions.gcampax.github.com
+ShutdownTimer 792 /download-extension/ShutdownTimer@neumann.shell-extension.zip?version_tag=5790 ShutdownTimer@neumann
+Steal My Focus 234 /download-extension/steal-my-focus@kagesenshi.org.shell-extension.zip?version_tag=6009 steal-my-focus@kagesenshi.org
+TopIcons Plus 1031 /download-extension/TopIcons@phocean.net.shell-extension.zip?version_tag=6538 TopIcons@phocean.net
+Dash to Dock 307 /download-extension/dash-to-dock@micxgx.gmail.com.shell-extension.zip?version_tag=6553 dash-to-dock@micxgx.gmail.com
