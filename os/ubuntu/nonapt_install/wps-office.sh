@@ -7,8 +7,8 @@ fi
 error ()
 {
     application=$1
-    error=$2
-    if [ $error = "yes" ]
+    error_occurred=$2
+    if [ $error_occurred = "yes" ]
         then
             echo '$application failed to install'
             echo '$application failed to install' >> /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/log.txt
@@ -36,7 +36,7 @@ error $dep_2 $dep_2_error
 url="http://kdl.cc.ksosoft.com/wps-community/download/a21/wps-office_10.1.0.5672~a21_amd64.deb"
 app="wps-office"
 wget $url -P $dldir -O $app.deb
-error="no"
-sudo dpkg -i $dldir/$app.deb || error="yes"
-error $app $error
+error_occurred="no"
+sudo dpkg -i $dldir/$app.deb || error_occurred="yes"
+error $app $error_occurred
 

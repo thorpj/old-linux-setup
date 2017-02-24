@@ -7,8 +7,8 @@ fi
 error ()
 {
     application=$1
-    error=$2
-    if [ $error = "yes" ]
+    error_occurred=$2
+    if [ $error_occurred = "yes" ]
         then
             echo '$application failed to install'
             echo '$application failed to install' >> /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/log.txt
@@ -22,5 +22,5 @@ error ()
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886
 echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo apt update
-sudo apt install spotify-client || error="yes"
-error "spotify" $error
+sudo apt install spotify-client || error_occurred="yes"
+error "spotify" $error_occurred

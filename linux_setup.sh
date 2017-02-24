@@ -1,5 +1,4 @@
 #!/bin/bash
-mkdir /home/$SUDO_USER/.temp
 if [[ $(/usr/bin/id -u) -ne 0 ]]; then
     echo "Exiting. Please run script as root"
     exit
@@ -11,14 +10,34 @@ if [ "$(uname -m)" = "x86_64" ]
         echo "32bit systems are not supported... exiting..."
         exit
 fi
+mkdir /home/$SUDO_USER/.temp
+mkdir /home/$SUDO_USER/Git
+cd /home/$SUDO_USER/Git/OS-Setup/
 
-cd /home/$SUDO_USER/OS-Setup/
+
+error ()
+{
+    appname="$1"
+    error_occurred="$2"
+    if [ "$error_occurred" = "yes" ]
+        then
+            echo "$appname failed to install"
+            echo "$appname failed to install" >> /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/log.txt
+        else
+            echo "$appname installed successfully"
+            echo "$appname installed successfully" >> /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/log.txt
+    fi
+
+
+}
 
 printf "\n"
 if dpkg --get-selections | grep -q "^curl[[:space:]]*install$" >/dev/null; then
     echo "Info: Curl is already installed"
 else
-    apt install curl
+    curl_error="no"
+    sudo apt install curl || curl_error="yes"
+    error "curl" "$curl_error"
     echo "Info: Curl has finished installing"
 fi
 
@@ -33,11 +52,13 @@ select_distro ()
         case $opt in
         "Ubuntu")
             cd ./OS/Ubuntu
-            ./Ubuntu.sh
+            sudo ./Ubuntu.sh
             break
             ;;
         *)
             echo "Invalid"
+            sleep 2s
+            clear
             select_distro
             ;;
         esac
@@ -77,9 +98,8 @@ git_clone ()
         read -p "Email: " email
         curl -u "$username:$password" --data '{"title":"$email","key":"$ssh_key"}' https://api.github.com/user/keys
     fi
-    cd /home/$USER/
-#    git clone git@github.com:thorpj/Linux-Applications.git
-#    git clone git@github.com:thorpj/Linux-Scripts.git
+    cd /home/$SUDO_USER/Git
+    git clone git@github.com:thorpj/Linux-Scripts.git
 }
 
 

@@ -26,6 +26,26 @@ askyesno ()
     fi
 }
 
+error ()
+{
+    appname="$1"
+    error_occurred="$2"
+    if [ "$error_occurred" = "yes" ]
+        then
+            echo "ERROR: $appname failed to install"
+            echo "ERROR: $appname failed to install" >> /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/log.txt
+        else
+            echo "INFO: $appname installed successfully"
+            echo "INFO: $appname installed successfully" >> /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/log.txt
+    fi
+}
+
+askyesno "Have you configured apt_package_list.txt, nonapt_package_list.txt, bashrc_aliases.txt and authorized_keys.txt? " true
+if [ "$result" != true ]
+    then
+        echo "Please configure those files, which are located in /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/"
+        exit
+fi
 
 apt_install ()
 {
@@ -45,7 +65,9 @@ apt_install ()
                     else
                         :
                 fi
-                sudo apt install $app_apt || echo '$app failed to install' >> /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/log.txt
+                install_error="no"
+                sudo apt install $app_apt || install_error="yes"
+                error "$app_apt" "$install_error"
         fi
 done
 }
@@ -71,35 +93,69 @@ nonapt_install ()
             then
                 :
             else
-                sudo $app_nonapt.sh || echo '$app failed to install' >> /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/log.txt
+                install_error="no"
+                sudo $app_nonapt.sh || install_error="yes"
+                error "$app_nonapt" "$install_error"
         fi
     done
     cd /home/$SUDO_USER/Git/OS-Setup/os/ubuntu
 }
 
-configuration ()
+gnome_install ()
 {
-    :
+    gnome_version=$(gnome-shell --version)
+    gnome_version=${gnome_version:12:4}
+    error_occurred="no"
+    python2 /home/$SUDO_USER/Git/OS-Setup/os/ubuntugnome-shell-extensions.py || error_occurred="yes"
+    error "gnome-shell-extensions" $error_occurred
 }
 
+configuration ()
+{
 
 
+}
+
+cleanup ()
+{
+    :
+    """
+    * Once finished, tell user to view apt_package_list.txt and nonapt_package_list.txt list to see what they should add to the taskbar
+    * Delete files from ~/.temp
+    * POST INSTALL NOTES
+        * How to setup tmuxifier
+    * gnome extensions need to be configured
+    """
+}
 
 
 Main ()
 {
-#    askyesno "Install apt apps? " true
-#    if [ "$result" = true ]; then
-#        apt_install
-#    fi
-#    askyesno "Append contents of authorized_keys.txt to ~/.ssh/authorized_keys? " true
-#    if [ "$result" = true ]; then
-#        authorized_keys
-#    fi
-#    askyesno "Append contents of bashrc_alises.txt to ~/.bashrc? " true
-#    if [ "$result" = true ]; then
-#        edit_bashrc
-#    fi
+    askyesno "Install apt apps? " true
+    if [ "$result" = true ]; then
+        apt_install
+    fi
+    askyesno "Install nonapt apps? " true
+    if [ "$result" = true ]; then
+        apt_install
+    fi
+    askyesno "Install Gnome extensions?" true
+    if [ "$result" = true ]; then
+        gnome_install
+    fi
+    askyesno "Append contents of authorized_keys.txt to ~/.ssh/authorized_keys? " true
+    if [ "$result" = true ]; then
+        authorized_keys
+    fi
+    askyesno "Append contents of bashrc_alises.txt to ~/.bashrc? " true
+    if [ "$result" = true ]; then
+        edit_bashrc
+    fi
+    askyesno "Configure system? " true
+    if [ "$result" = true ]; then
+        configuration
+    fi
+    cleanup
 }
 Main
 
