@@ -88,24 +88,9 @@ askyesno ()
 }
 
 
-git_clone ()
-{
-    askyesno "Would you like to add your devices public SSH key to Github? " true
-    if [ "$result" = true ]; then
-        read -p "SSH key: " ssh_key
-        read -p "Username: " username
-        read -p "Password: " password
-        read -p "Email: " email
-        curl -u "$username:$password" --data '{"title":"$email","key":"$ssh_key"}' https://api.github.com/user/keys
-    fi
-    cd /home/$SUDO_USER/Git
-    git clone git@github.com:thorpj/Linux-Scripts.git /home/$SUDO_USER/Git/Linux-Scripts
-}
-
-
 Main ()
 {
-    git_clone
+    git clone git@github.com:thorpj/Linux-Scripts.git /home/$SUDO_USER/Git/Linux-Scripts
     select_distro
 }
 Main
