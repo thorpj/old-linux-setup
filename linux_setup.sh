@@ -36,7 +36,7 @@ if dpkg --get-selections | grep -q "^curl[[:space:]]*install$" >/dev/null; then
     echo "Info: Curl is already installed"
 else
     curl_error="no"
-    sudo apt install curl || curl_error="yes"
+    sudo apt install -y curl || curl_error="yes"
     error "curl" "$curl_error"
     echo "Info: Curl has finished installing"
 fi
@@ -99,7 +99,7 @@ git_clone ()
         curl -u "$username:$password" --data '{"title":"$email","key":"$ssh_key"}' https://api.github.com/user/keys
     fi
     cd /home/$SUDO_USER/Git
-    git clone git@github.com:thorpj/Linux-Scripts.git
+    git clone git@github.com:thorpj/Linux-Scripts.git /home/$SUDO_USER/Git/Linux-Scripts
 }
 
 

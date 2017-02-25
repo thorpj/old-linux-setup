@@ -23,7 +23,7 @@ dldir="/home/$SUDO_USER/.temp/"
 
 dep_1="ttf-mscorefonts-installer"
 dep_1_error="no"
-sudo apt install $dep_1 || dep_1_error="yes"
+sudo apt install -y $dep_1 || dep_1_error="yes"
 error $dep_1 $dep_1_error
 
 dep_2_url="http://ftp.iinet.net.au/pub/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb"

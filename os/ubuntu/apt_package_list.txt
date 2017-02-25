@@ -23,3 +23,6 @@ tmux
 nautilus-dropbox
 google-chrome-stable
 pm-utils
+virtualbox-5.1
+ubuntu-restricted-extras
+albert

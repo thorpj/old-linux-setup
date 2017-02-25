@@ -91,7 +91,7 @@ org.gnome.evolution.plugin.itip delete-processed false
 org.gnome.evolution-data-server.calendar contacts-reminder-interval 15
 org.gnome.evolution-data-server.calendar contacts-reminder-units 'minutes'
 org.gnome.evolution-data-server.calendar contacts-reminder-enabled false
-org.gnome.evolution.plugin.attachment-reminder attachment-reminder-clues ['attachment', 'attaching', 'attached', 'enclosed']
+org.gnome.evolution.plugin.attachment-reminder attachment-reminder-clues "['attachment', 'attaching', 'attached', 'enclosed']"
 com.canonical.a11y-profile-manager active-profile ''
 org.gnome.libgnomekbd.preview width -1
 org.gnome.libgnomekbd.preview height -1
@@ -152,19 +152,19 @@ org.gnome.settings-daemon.plugins.a11y-settings active true
 org.gnome.settings-daemon.plugins.a11y-settings priority 0
 org.gnome.DejaDup.Rackspace username ''
 org.gnome.DejaDup.Rackspace container '$HOSTNAME'
-org.gnome.desktop.search-providers sort-order ['gnome-contacts.desktop', 'gnome-documents.desktop', 'nautilus.desktop']
+org.gnome.desktop.search-providers sort-order "['gnome-contacts.desktop', 'gnome-documents.desktop', 'nautilus.desktop']"
 org.gnome.desktop.search-providers disabled @as []
 org.gnome.desktop.search-providers disable-external false
 org.gnome.desktop.search-providers enabled @as []
 org.gnome.desktop.media-handling automount-open true
 org.gnome.desktop.media-handling automount true
-org.gnome.desktop.media-handling autorun-x-content-start-app ['x-content/unix-software']
+org.gnome.desktop.media-handling autorun-x-content-start-app "['x-content/unix-software']"
 org.gnome.desktop.media-handling autorun-never false
 org.gnome.desktop.media-handling autorun-x-content-ignore @as []
 org.gnome.desktop.media-handling autorun-x-content-open-folder @as []
 org.gnome.software first-run true
-org.gnome.software check-timestamp int64 1487910977
-org.gnome.software compatible-projects ['GNOME', 'KDE', 'XFCE']
+org.gnome.software check-timestamp int64 1487975871
+org.gnome.software compatible-projects "['GNOME', 'KDE', 'XFCE']"
 org.gnome.software download-updates true
 org.gnome.software show-ratings false
 org.gnome.software official-sources @as []
@@ -191,11 +191,11 @@ org.gnome.nm-applet disable-connected-notifications false
 org.gnome.nm-applet suppress-wireless-networks-available false
 org.gnome.nm-applet show-applet true
 org.gnome.nm-applet disable-wifi-create false
-org.gnome.Terminal.ProfilesList list ['b1dcc9dd-5262-4d8d-a863-c897e6d979b9']
+org.gnome.Terminal.ProfilesList list "['b1dcc9dd-5262-4d8d-a863-c897e6d979b9']"
 org.gnome.Terminal.ProfilesList default 'b1dcc9dd-5262-4d8d-a863-c897e6d979b9'
 org.gnome.evolution disabled-eplugins @as []
 org.gnome.evolution version '3.18.5'
-org.gnome.settings-daemon.plugins whitelisted-plugins ['all']
+org.gnome.settings-daemon.plugins whitelisted-plugins "['all']"
 org.gnome.settings-daemon.plugins.orientation active true
 org.gnome.settings-daemon.plugins.orientation priority 0
 org.gnome.settings-daemon.plugins.keyboard active true
@@ -228,7 +228,7 @@ org.gnome.settings-daemon.plugins.media-keys screenshot-clip '<Ctrl>Print'
 org.gnome.settings-daemon.plugins.media-keys magnifier '<Alt><Super>8'
 org.gnome.settings-daemon.plugins.media-keys help ''
 org.gnome.settings-daemon.plugins.media-keys search 'XF86Search'
-org.gnome.settings-daemon.plugins.media-keys custom-keybindings ['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']
+org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']"
 org.gnome.settings-daemon.plugins.media-keys magnifier-zoom-in '<Alt><Super>equal'
 org.gnome.settings-daemon.plugins.media-keys calculator 'XF86Calculator'
 org.gnome.settings-daemon.plugins.media-keys video-out '<Super>p'
@@ -355,8 +355,8 @@ org.freedesktop.Tracker.Writeback verbosity 'errors'
 org.gnome.Contacts view-subset 'main'
 org.gnome.Contacts did-initial-setup false
 org.gnome.gedit.state.file-filter filter-id 0
-org.gnome.gedit.state.history-entry search-for-entry ['bash', 'echo ', ' >> /config/auth/client1.ovpn', 'Freedcamp']
-org.gnome.gedit.state.history-entry replace-with-entry ['Python', 'python', 'Youtube', 'Google-Photos', 'Curtin-Oasis', 'Network-Presence', 'Google-Maps', 'XRPS']
+org.gnome.gedit.state.history-entry search-for-entry "['bash', 'echo ', ' >> /config/auth/client1.ovpn', 'Freedcamp']"
+org.gnome.gedit.state.history-entry replace-with-entry "['Python', 'python', 'Youtube', 'Google-Photos', 'Curtin-Oasis', 'Network-Presence', 'Google-Maps', 'XRPS']"
 org.gnome.gedit.state.window size (793, 656)
 org.gnome.gedit.state.window state 132
 org.gnome.gedit.state.window bottom-panel-active-page ''
@@ -384,7 +384,7 @@ org.gnome.FileRoller.Dialogs.New default-extension '.tar.gz'
 org.gnome.FileRoller.Dialogs.New other-options false
 org.gnome.FileRoller.Dialogs.New volume-size 0
 org.gnome.FileRoller.Dialogs.New encrypt-header false
-org.gnome.gedit.plugins active-plugins ['time', 'spell', 'docinfo', 'filebrowser', 'modelines']
+org.gnome.gedit.plugins active-plugins "['time', 'spell', 'docinfo', 'filebrowser', 'modelines']"
 org.gnome.settings-daemon.plugins.gsdwacom active true
 org.gnome.settings-daemon.plugins.gsdwacom priority 0
 org.gnome.desktop.a11y.mouse dwell-time 1.2
@@ -398,7 +398,7 @@ org.gnome.desktop.a11y.mouse dwell-click-enabled false
 org.gnome.desktop.a11y.mouse dwell-threshold 10
 org.gnome.desktop.a11y.mouse dwell-gesture-drag 'down'
 org.gnome.desktop.a11y.mouse dwell-gesture-secondary 'right'
-org.gnome.shell.extensions.screenshot-window-sizer cycle-screenshot-sizes ['<Alt><Control>s']
+org.gnome.shell.extensions.screenshot-window-sizer cycle-screenshot-sizes "['<Alt><Control>s']"
 org.gnome.desktop.wm.preferences disable-workarounds false
 org.gnome.desktop.wm.preferences focus-new-windows 'smart'
 org.gnome.desktop.wm.preferences action-right-click-titlebar 'menu'
@@ -420,11 +420,11 @@ org.gnome.desktop.wm.preferences resize-with-right-button true
 org.gnome.desktop.wm.preferences titlebar-font 'Cantarell Bold 11'
 org.gnome.desktop.wm.preferences visual-bell-type 'fullscreen-flash'
 org.gnome.seahorse.recipients sort-by 'name'
-org.gnome.gedit.state.history-entry search-for-entry ['bash', 'echo ', ' >> /config/auth/client1.ovpn', 'Freedcamp']
-org.gnome.gedit.state.history-entry replace-with-entry ['Python', 'python', 'Youtube', 'Google-Photos', 'Curtin-Oasis', 'Network-Presence', 'Google-Maps', 'XRPS']
-org.gnome.online-accounts whitelisted-providers ['all']
-org.gnome.mutter.keybindings toggle-tiled-right ['<Super>Right', '<Super>Right']
-org.gnome.mutter.keybindings toggle-tiled-left ['<Super>Left', '<Super>Left']
+org.gnome.gedit.state.history-entry search-for-entry "['bash', 'echo ', ' >> /config/auth/client1.ovpn', 'Freedcamp']"
+org.gnome.gedit.state.history-entry replace-with-entry "['Python', 'python', 'Youtube', 'Google-Photos', 'Curtin-Oasis', 'Network-Presence', 'Google-Maps', 'XRPS']"
+org.gnome.online-accounts whitelisted-providers "['all']"
+org.gnome.mutter.keybindings toggle-tiled-right "['<Super>Right', '<Super>Right']"
+org.gnome.mutter.keybindings toggle-tiled-left "['<Super>Left', '<Super>Left']"
 org.gnome.mutter.keybindings tab-popup-cancel @as []
 org.gnome.mutter.keybindings tab-popup-select @as []
 org.gnome.settings-daemon.plugins.xsettings disabled-gtk-modules @as []
@@ -452,7 +452,7 @@ org.gnome.Empathy.conversation nick-completion-char ':'
 org.gnome.Empathy.conversation show-contacts-in-rooms true
 org.gnome.nautilus.window-state sidebar-width 192
 org.gnome.nautilus.window-state start-with-sidebar true
-org.gnome.nautilus.window-state geometry '1142x577+1093+99'
+org.gnome.nautilus.window-state geometry '1142x577+1733+329'
 org.gnome.nautilus.window-state maximized false
 org.gnome.nautilus.window-state start-with-location-bar true
 org.gnome.libgnomekbd.keyboard layouts @as []
@@ -486,7 +486,7 @@ org.gnome.totem filesystem-paths @as []
 org.gnome.totem contrast 32767
 org.gnome.totem autoload-chapters true
 org.gnome.totem disable-deinterlacing false
-org.gnome.totem active-plugins ['screensaver', 'save-file', 'skipto', 'movie-properties', 'apple-trailers', 'autoload-subtitles', 'vimeo', 'recent', 'screenshot', 'media_player_keys']
+org.gnome.totem active-plugins "['screensaver', 'save-file', 'skipto', 'movie-properties', 'apple-trailers', 'autoload-subtitles', 'vimeo', 'recent', 'screenshot', 'media_player_keys']"
 org.gnome.totem autoload-subtitles false
 org.gnome.totem open-uri ''
 org.gnome.totem hue 32767
@@ -510,7 +510,7 @@ org.gnome.settings-daemon.plugins.media-keys screenshot-clip '<Ctrl>Print'
 org.gnome.settings-daemon.plugins.media-keys magnifier '<Alt><Super>8'
 org.gnome.settings-daemon.plugins.media-keys help ''
 org.gnome.settings-daemon.plugins.media-keys search 'XF86Search'
-org.gnome.settings-daemon.plugins.media-keys custom-keybindings ['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']
+org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']"
 org.gnome.settings-daemon.plugins.media-keys magnifier-zoom-in '<Alt><Super>equal'
 org.gnome.settings-daemon.plugins.media-keys calculator 'XF86Calculator'
 org.gnome.settings-daemon.plugins.media-keys video-out '<Super>p'
@@ -564,16 +564,16 @@ org.gnome.FileRoller.Dialogs.Add update false
 org.gnome.settings-daemon.plugins.gdu-sd active true
 org.gnome.settings-daemon.plugins.gdu-sd priority 1
 org.gnome.evolution.plugin.publish-calendar uris @as []
-org.freedesktop.ibus.general.xkblayoutconfig east-asia ['dz', 'km', 'lo', 'my', 'th', 'vi']
-org.freedesktop.ibus.general.xkblayoutconfig center-asia ['bo', 'zh']
-org.freedesktop.ibus.general.xkblayoutconfig north-europe ['da', 'fi', 'fo', 'is', 'no', 'se', 'sv']
-org.freedesktop.ibus.general.xkblayoutconfig west-europe ['ca', 'cs', 'de', 'en', 'es', 'fr', 'gd', 'hu', 'it', 'nl', 'pt', 'sk', 'sl']
-org.freedesktop.ibus.general.xkblayoutconfig group-list ['west_europe', 'south_europe', 'east_europe', 'north_europe', 'west_asia', 'center_asia', 'east_asia', 'india', 'australia']
-org.freedesktop.ibus.general.xkblayoutconfig south-europe ['bg', 'bs', 'el', 'mk', 'mt', 'ro', 'sq', 'sr']
-org.freedesktop.ibus.general.xkblayoutconfig west-asia ['am', 'ar', 'az', 'ber', 'fa', 'ha', 'he', 'hy', 'ig', 'ku', 'tg', 'tr', 'yo']
-org.freedesktop.ibus.general.xkblayoutconfig india ['bn', 'dv', 'gu', 'hi', 'kn', 'ml', 'ne', 'or', 'pa', 'si', 'ta', 'te', 'ur']
-org.freedesktop.ibus.general.xkblayoutconfig east-europe ['be', 'csb', 'cv', 'et', 'ka', 'kk', 'ky', 'lt', 'lv', 'pl', 'ru', 'tt', 'uk', 'uz']
-org.freedesktop.ibus.general.xkblayoutconfig australia ['mi']
+org.freedesktop.ibus.general.xkblayoutconfig east-asia "['dz', 'km', 'lo', 'my', 'th', 'vi']"
+org.freedesktop.ibus.general.xkblayoutconfig center-asia "['bo', 'zh']"
+org.freedesktop.ibus.general.xkblayoutconfig north-europe "['da', 'fi', 'fo', 'is', 'no', 'se', 'sv']"
+org.freedesktop.ibus.general.xkblayoutconfig west-europe "['ca', 'cs', 'de', 'en', 'es', 'fr', 'gd', 'hu', 'it', 'nl', 'pt', 'sk', 'sl']"
+org.freedesktop.ibus.general.xkblayoutconfig group-list "['west_europe', 'south_europe', 'east_europe', 'north_europe', 'west_asia', 'center_asia', 'east_asia', 'india', 'australia']"
+org.freedesktop.ibus.general.xkblayoutconfig south-europe "['bg', 'bs', 'el', 'mk', 'mt', 'ro', 'sq', 'sr']"
+org.freedesktop.ibus.general.xkblayoutconfig west-asia "['am', 'ar', 'az', 'ber', 'fa', 'ha', 'he', 'hy', 'ig', 'ku', 'tg', 'tr', 'yo']"
+org.freedesktop.ibus.general.xkblayoutconfig india "['bn', 'dv', 'gu', 'hi', 'kn', 'ml', 'ne', 'or', 'pa', 'si', 'ta', 'te', 'ur']"
+org.freedesktop.ibus.general.xkblayoutconfig east-europe "['be', 'csb', 'cv', 'et', 'ka', 'kk', 'ky', 'lt', 'lv', 'pl', 'ru', 'tt', 'uk', 'uz']"
+org.freedesktop.ibus.general.xkblayoutconfig australia "['mi']"
 org.gnome.settings-daemon.plugins.xrandr active true
 org.gnome.settings-daemon.plugins.xrandr priority 0
 org.gnome.settings-daemon.plugins.xrandr default-monitors-setup 'follow-lid'
@@ -657,7 +657,7 @@ org.freedesktop.Tracker.FTS max-words-to-index 10000
 org.gnome.system.proxy use-same-proxy true
 org.gnome.system.proxy mode 'none'
 org.gnome.system.proxy autoconfig-url ''
-org.gnome.system.proxy ignore-hosts ['localhost', '127.0.0.0/8', '::1']
+org.gnome.system.proxy ignore-hosts "['localhost', '127.0.0.0/8', '::1']"
 org.gnome.system.proxy.ftp host ''
 org.gnome.system.proxy.ftp port 0
 org.gnome.system.proxy.socks host ''
@@ -673,7 +673,7 @@ org.gnome.system.proxy.https port 0
 org.gnome.mousetweaks click-type-window-style 'both'
 org.gnome.mousetweaks click-type-window-geometry ''
 org.gnome.mousetweaks click-type-window-orientation 'vertical'
-org.gnome.gedit.preferences.encodings candidate-encodings ['']
+org.gnome.gedit.preferences.encodings candidate-encodings "['']"
 org.gnome.gedit.preferences.print print-syntax-highlighting true
 org.gnome.gedit.preferences.print margin-bottom 25.0
 org.gnome.gedit.preferences.print print-font-numbers-pango 'Sans 8'
@@ -738,20 +738,20 @@ org.gnome.desktop.a11y.applications screen-magnifier-enabled false
 org.gnome.desktop.a11y.applications screen-reader-enabled false
 org.gnome.settings-daemon.plugins.rfkill active true
 org.gnome.settings-daemon.plugins.rfkill priority 0
-org.gnome.mutter.wayland.keybindings switch-to-session-10 ['<Primary><Alt>F10']
-org.gnome.mutter.wayland.keybindings switch-to-session-11 ['<Primary><Alt>F11']
-org.gnome.mutter.wayland.keybindings switch-to-session-12 ['<Primary><Alt>F12']
-org.gnome.mutter.wayland.keybindings switch-to-session-1 ['<Primary><Alt>F1']
-org.gnome.mutter.wayland.keybindings switch-to-session-2 ['<Primary><Alt>F2']
-org.gnome.mutter.wayland.keybindings switch-to-session-3 ['<Primary><Alt>F3']
-org.gnome.mutter.wayland.keybindings switch-to-session-4 ['<Primary><Alt>F4']
-org.gnome.mutter.wayland.keybindings switch-to-session-5 ['<Primary><Alt>F5']
-org.gnome.mutter.wayland.keybindings switch-to-session-6 ['<Primary><Alt>F6']
-org.gnome.mutter.wayland.keybindings switch-to-session-7 ['<Primary><Alt>F7']
-org.gnome.mutter.wayland.keybindings switch-to-session-8 ['<Primary><Alt>F8']
-org.gnome.mutter.wayland.keybindings switch-to-session-9 ['<Primary><Alt>F9']
+org.gnome.mutter.wayland.keybindings switch-to-session-10 "['<Primary><Alt>F10']"
+org.gnome.mutter.wayland.keybindings switch-to-session-11 "['<Primary><Alt>F11']"
+org.gnome.mutter.wayland.keybindings switch-to-session-12 "['<Primary><Alt>F12']"
+org.gnome.mutter.wayland.keybindings switch-to-session-1 "['<Primary><Alt>F1']"
+org.gnome.mutter.wayland.keybindings switch-to-session-2 "['<Primary><Alt>F2']"
+org.gnome.mutter.wayland.keybindings switch-to-session-3 "['<Primary><Alt>F3']"
+org.gnome.mutter.wayland.keybindings switch-to-session-4 "['<Primary><Alt>F4']"
+org.gnome.mutter.wayland.keybindings switch-to-session-5 "['<Primary><Alt>F5']"
+org.gnome.mutter.wayland.keybindings switch-to-session-6 "['<Primary><Alt>F6']"
+org.gnome.mutter.wayland.keybindings switch-to-session-7 "['<Primary><Alt>F7']"
+org.gnome.mutter.wayland.keybindings switch-to-session-8 "['<Primary><Alt>F8']"
+org.gnome.mutter.wayland.keybindings switch-to-session-9 "['<Primary><Alt>F9']"
 org.gnome.rhythmbox.sources browser-views 'artists-albums'
-org.gnome.rhythmbox.sources visible-columns ['track-number', 'artist', 'album', 'genre', 'duration', 'post-time']
+org.gnome.rhythmbox.sources visible-columns "['track-number', 'artist', 'album', 'genre', 'duration', 'post-time']"
 org.gnome.gedit.preferences.print print-syntax-highlighting true
 org.gnome.gedit.preferences.print margin-bottom 25.0
 org.gnome.gedit.preferences.print print-font-numbers-pango 'Sans 8'
@@ -768,17 +768,17 @@ org.gnome.evolution.spamassassin command ''
 org.gnome.evolution.spamassassin local-only true
 org.freedesktop.Tracker.Miner.Files initial-sleep 15
 org.freedesktop.Tracker.Miner.Files index-optical-discs false
-org.freedesktop.Tracker.Miner.Files index-recursive-directories ['&DESKTOP', '&DOCUMENTS', '&DOWNLOAD', '&MUSIC', '&PICTURES', '&VIDEOS']
+org.freedesktop.Tracker.Miner.Files index-recursive-directories "['&DESKTOP', '&DOCUMENTS', '&DOWNLOAD', '&MUSIC', '&PICTURES', '&VIDEOS']"
 org.freedesktop.Tracker.Miner.Files enable-monitors true
 org.freedesktop.Tracker.Miner.Files index-on-battery true
 org.freedesktop.Tracker.Miner.Files sched-idle 'first-index'
-org.freedesktop.Tracker.Miner.Files ignored-directories ['po', 'CVS', 'core-dumps', 'lost+found']
+org.freedesktop.Tracker.Miner.Files ignored-directories "['po', 'CVS', 'core-dumps', 'lost+found']"
 org.freedesktop.Tracker.Miner.Files crawling-interval -1
-org.freedesktop.Tracker.Miner.Files ignored-files ['*~', '*.o', '*.la', '*.lo', '*.loT', '*.in', '*.csproj', '*.m4', '*.rej', '*.gmo', '*.orig', '*.pc', '*.omf', '*.aux', '*.tmp', '*.po', '*.vmdk', '*.vm*', '*.nvram', '*.part', '*.rcore', '*.lzo', 'autom4te', 'conftest', 'confstat', 'Makefile', 'SCCS', 'ltmain.sh', 'libtool', 'config.status', 'confdefs.h', 'configure']
-org.freedesktop.Tracker.Miner.Files ignored-directories-with-content ['.trackerignore']
+org.freedesktop.Tracker.Miner.Files ignored-files "['*~', '*.o', '*.la', '*.lo', '*.loT', '*.in', '*.csproj', '*.m4', '*.rej', '*.gmo', '*.orig', '*.pc', '*.omf', '*.aux', '*.tmp', '*.po', '*.vmdk', '*.vm*', '*.nvram', '*.part', '*.rcore', '*.lzo', 'autom4te', 'conftest', 'confstat', 'Makefile', 'SCCS', 'ltmain.sh', 'libtool', 'config.status', 'confdefs.h', 'configure']"
+org.freedesktop.Tracker.Miner.Files ignored-directories-with-content "['.trackerignore']"
 org.freedesktop.Tracker.Miner.Files index-removable-devices false
 org.freedesktop.Tracker.Miner.Files removable-days-threshold 3
-org.freedesktop.Tracker.Miner.Files index-single-directories ['$HOME']
+org.freedesktop.Tracker.Miner.Files index-single-directories "['$HOME']"
 org.freedesktop.Tracker.Miner.Files low-disk-space-limit -1
 org.freedesktop.Tracker.Miner.Files throttle 0
 org.freedesktop.Tracker.Miner.Files verbosity 'errors'
@@ -844,7 +844,7 @@ org.gnome.mines mode 0
 org.gnome.mines xsize 16
 org.gnome.mines nmines 40
 org.gnome.mines use-overmine-warning false
-org.gnome.shell enabled-extensions ['alternate-tab@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'drop-down-terminal@gs-extensions.zzrough.org', 'mediaplayer@patapon.info', 'netspeed@hedayaty.gmail.com', 'middleclickclose@paolo.tranquilli.gmail.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'ShutdownTimer@neumann', 'steal-my-focus@kagesenshi.org', 'TopIcons@phocean.net', 'dash-to-dock@micxgx.gmail.com', 'caffeine@patapon.info']
+org.gnome.shell enabled-extensions "['alternate-tab@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'drop-down-terminal@gs-extensions.zzrough.org', 'mediaplayer@patapon.info', 'netspeed@hedayaty.gmail.com', 'middleclickclose@paolo.tranquilli.gmail.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'ShutdownTimer@neumann', 'steal-my-focus@kagesenshi.org', 'TopIcons@phocean.net', 'dash-to-dock@micxgx.gmail.com', 'caffeine@patapon.info']"
 org.gnome.shell command-history @as []
 org.gnome.shell remember-mount-password false
 org.gnome.shell always-show-log-out false
@@ -852,14 +852,14 @@ org.gnome.shell looking-glass-history @as []
 org.gnome.shell app-picker-view uint32 1
 org.gnome.shell disable-extension-version-validation false
 org.gnome.shell development-tools true
-org.gnome.shell favorite-apps ['google-chrome.desktop', 'rhythmbox.desktop', 'org.gnome.Nautilus.desktop', 'franz.desktop', 'wps-office-wps.desktop', 'wps-office-wpp.desktop', 'wps-office-et.desktop', 'Spotify (AdKiller).desktop', 'code.desktop', 'jetbrains-pycharm.desktop', 'jetbrains-phpstorm.desktop', 'jetbrains-webstorm.desktop', 'jetbrains-rubymine.desktop', 'jetbrains-clion.desktop', 'zim.desktop', 'bibus.desktop', 'discord.desktop']
+org.gnome.shell favorite-apps "['google-chrome.desktop', 'rhythmbox.desktop', 'org.gnome.Nautilus.desktop', 'franz.desktop', 'wps-office-wps.desktop', 'wps-office-wpp.desktop', 'wps-office-et.desktop', 'Spotify (AdKiller).desktop', 'code.desktop', 'jetbrains-pycharm.desktop', 'jetbrains-phpstorm.desktop', 'jetbrains-webstorm.desktop', 'jetbrains-rubymine.desktop', 'jetbrains-clion.desktop', 'zim.desktop', 'bibus.desktop', 'discord.desktop', 'virtualbox.desktop']"
 org.gnome.shell.keyboard keyboard-type 'touch'
-org.gnome.shell.keybindings toggle-message-tray ['<Super>v', '<Super>m']
-org.gnome.shell.keybindings open-application-menu ['<Super>F10']
+org.gnome.shell.keybindings toggle-message-tray "['<Super>v', '<Super>m']"
+org.gnome.shell.keybindings open-application-menu "['<Super>F10']"
 org.gnome.shell.keybindings pause-resume-tweens @as []
-org.gnome.shell.keybindings toggle-application-view ['<Super>a']
-org.gnome.shell.keybindings focus-active-notification ['<Super>n']
-org.gnome.shell.keybindings toggle-overview ['<Super>s']
+org.gnome.shell.keybindings toggle-application-view "['<Super>a']"
+org.gnome.shell.keybindings focus-active-notification "['<Super>n']"
+org.gnome.shell.keybindings toggle-overview "['<Super>s']"
 org.gnome.shell.calendar show-weekdate false
 org.gnome.Empathy.hints close-main-window true
 org.gnome.Terminal.Legacy.Settings new-terminal-mode 'window'
@@ -870,7 +870,7 @@ org.gnome.Terminal.Legacy.Settings shell-integration-enabled true
 org.gnome.Terminal.Legacy.Settings default-show-menubar true
 org.gnome.Terminal.Legacy.Settings mnemonics-enabled false
 org.gnome.Terminal.Legacy.Settings schema-version uint32 3
-org.gnome.Terminal.Legacy.Settings encodings ['UTF-8']
+org.gnome.Terminal.Legacy.Settings encodings "['UTF-8']"
 org.gnome.Terminal.Legacy.Settings shortcuts-enabled true
 org.gnome.Terminal.Legacy.Settings tab-policy 'automatic'
 org.gnome.Terminal.Legacy.Keybindings switch-to-tab-3 '<Alt>3'
@@ -961,7 +961,7 @@ org.gnome.desktop.screensaver picture-uri 'file:///usr/share/backgrounds/ubuntu-
 org.gnome.desktop.screensaver status-message-enabled true
 org.gnome.desktop.screensaver ubuntu-lock-on-suspend true
 org.gnome.desktop.screensaver user-switch-enabled true
-org.gnome.eog.plugins active-plugins ['fullscreen']
+org.gnome.eog.plugins active-plugins "['fullscreen']"
 org.gnome.system.locale region ''
 org.gnome.settings-daemon.plugins.updates frequency-get-updates 86400
 org.gnome.settings-daemon.plugins.updates frequency-get-upgrades 604800
@@ -978,92 +978,92 @@ org.gnome.settings-daemon.plugins.updates banned-firmware '*/intel-ucode/*'
 org.gnome.settings-daemon.plugins.updates media-repo-filenames 'media.repo,.discinfo'
 org.gnome.settings-daemon.plugins.updates enable-check-firmware true
 org.gnome.settings-daemon.plugins.updates active false
-org.gnome.desktop.wm.keybindings cycle-windows-backward ['<Shift><Alt>Escape']
-org.gnome.desktop.wm.keybindings minimize ['<Primary><Alt>KP_0']
+org.gnome.desktop.wm.keybindings cycle-windows-backward "['<Shift><Alt>Escape']"
+org.gnome.desktop.wm.keybindings minimize "['<Primary><Alt>KP_0']"
 org.gnome.desktop.wm.keybindings move-to-workspace-7 @as []
 org.gnome.desktop.wm.keybindings move-to-workspace-8 @as []
 org.gnome.desktop.wm.keybindings move-to-workspace-9 @as []
-org.gnome.desktop.wm.keybindings move-to-monitor-left ['<Shift><Super>Left']
+org.gnome.desktop.wm.keybindings move-to-monitor-left "['<Shift><Super>Left']"
 org.gnome.desktop.wm.keybindings move-to-workspace-5 @as []
 org.gnome.desktop.wm.keybindings move-to-workspace-6 @as []
 org.gnome.desktop.wm.keybindings move-to-workspace-10 @as []
 org.gnome.desktop.wm.keybindings move-to-workspace-11 @as []
 org.gnome.desktop.wm.keybindings move-to-workspace-12 @as []
 org.gnome.desktop.wm.keybindings move-to-center @as []
-org.gnome.desktop.wm.keybindings unmaximize ['<Primary><Super>Down', '<Super>Down', '<Alt>F5']
-org.gnome.desktop.wm.keybindings panel-main-menu ['<Super>s', '<Alt>F1']
-org.gnome.desktop.wm.keybindings cycle-windows ['<Alt>Escape']
-org.gnome.desktop.wm.keybindings cycle-panels-backward ['<Shift><Control><Alt>Escape']
-org.gnome.desktop.wm.keybindings panel-run-dialog ['<Alt>F2']
-org.gnome.desktop.wm.keybindings switch-to-workspace-down ['<Primary><Super>Right', '<Control><Alt>Down']
-org.gnome.desktop.wm.keybindings move-to-corner-ne ['<Primary><Alt>KP_Prior']
-org.gnome.desktop.wm.keybindings move-to-side-e ['<Primary><Alt>KP_Right']
+org.gnome.desktop.wm.keybindings unmaximize "['<Primary><Super>Down', '<Super>Down', '<Alt>F5']"
+org.gnome.desktop.wm.keybindings panel-main-menu "['<Super>s', '<Alt>F1']"
+org.gnome.desktop.wm.keybindings cycle-windows "['<Alt>Escape']"
+org.gnome.desktop.wm.keybindings cycle-panels-backward "['<Shift><Control><Alt>Escape']"
+org.gnome.desktop.wm.keybindings panel-run-dialog "['<Alt>F2']"
+org.gnome.desktop.wm.keybindings switch-to-workspace-down "['<Primary><Super>Right', '<Control><Alt>Down']"
+org.gnome.desktop.wm.keybindings move-to-corner-ne "['<Primary><Alt>KP_Prior']"
+org.gnome.desktop.wm.keybindings move-to-side-e "['<Primary><Alt>KP_Right']"
 org.gnome.desktop.wm.keybindings move-to-workspace-right @as []
 org.gnome.desktop.wm.keybindings always-on-top @as []
-org.gnome.desktop.wm.keybindings move-to-workspace-up ['<Primary><Shift><Super>Left', '<Control><Shift><Alt>Up']
+org.gnome.desktop.wm.keybindings move-to-workspace-up "['<Primary><Shift><Super>Left', '<Control><Shift><Alt>Up']"
 org.gnome.desktop.wm.keybindings raise @as []
-org.gnome.desktop.wm.keybindings maximize ['<Primary><Super>Up', '<Super>Up', '<Primary><Alt>KP_5']
-org.gnome.desktop.wm.keybindings cycle-group-backward ['<Shift><Alt>F6']
-org.gnome.desktop.wm.keybindings move-to-side-n ['<Primary><Alt>KP_Up']
-org.gnome.desktop.wm.keybindings move-to-side-s ['<Primary><Alt>KP_Down']
+org.gnome.desktop.wm.keybindings maximize "['<Primary><Super>Up', '<Super>Up', '<Primary><Alt>KP_5']"
+org.gnome.desktop.wm.keybindings cycle-group-backward "['<Shift><Alt>F6']"
+org.gnome.desktop.wm.keybindings move-to-side-n "['<Primary><Alt>KP_Up']"
+org.gnome.desktop.wm.keybindings move-to-side-s "['<Primary><Alt>KP_Down']"
 org.gnome.desktop.wm.keybindings maximize-horizontally @as []
-org.gnome.desktop.wm.keybindings move-to-side-w ['<Primary><Alt>KP_Left']
-org.gnome.desktop.wm.keybindings move-to-corner-nw ['<Primary><Alt>KP_Home']
+org.gnome.desktop.wm.keybindings move-to-side-w "['<Primary><Alt>KP_Left']"
+org.gnome.desktop.wm.keybindings move-to-corner-nw "['<Primary><Alt>KP_Home']"
 org.gnome.desktop.wm.keybindings switch-windows @as []
-org.gnome.desktop.wm.keybindings begin-move ['<Alt>F7']
-org.gnome.desktop.wm.keybindings move-to-monitor-down ['<Super><Shift>Down']
+org.gnome.desktop.wm.keybindings begin-move "['<Alt>F7']"
+org.gnome.desktop.wm.keybindings move-to-monitor-down "['<Super><Shift>Down']"
 org.gnome.desktop.wm.keybindings switch-windows-backward @as []
 org.gnome.desktop.wm.keybindings move-to-workspace-left @as []
-org.gnome.desktop.wm.keybindings move-to-corner-se ['<Primary><Alt>KP_Next']
-org.gnome.desktop.wm.keybindings activate-window-menu ['<Alt>space']
-org.gnome.desktop.wm.keybindings switch-input-source ['<Super>space']
+org.gnome.desktop.wm.keybindings move-to-corner-se "['<Primary><Alt>KP_Next']"
+org.gnome.desktop.wm.keybindings activate-window-menu "['<Alt>space']"
+org.gnome.desktop.wm.keybindings switch-input-source "['<Super>space']"
 org.gnome.desktop.wm.keybindings toggle-above @as []
-org.gnome.desktop.wm.keybindings move-to-monitor-right ['<Super><Shift>Right']
-org.gnome.desktop.wm.keybindings switch-input-source-backward ['<Shift><Super>space']
-org.gnome.desktop.wm.keybindings move-to-workspace-last ['<Super><Shift>End']
+org.gnome.desktop.wm.keybindings move-to-monitor-right "['<Super><Shift>Right']"
+org.gnome.desktop.wm.keybindings switch-input-source-backward "['<Shift><Super>space']"
+org.gnome.desktop.wm.keybindings move-to-workspace-last "['<Super><Shift>End']"
 org.gnome.desktop.wm.keybindings lower @as []
-org.gnome.desktop.wm.keybindings cycle-panels ['<Control><Alt>Escape']
+org.gnome.desktop.wm.keybindings cycle-panels "['<Control><Alt>Escape']"
 org.gnome.desktop.wm.keybindings toggle-fullscreen @as []
 org.gnome.desktop.wm.keybindings toggle-on-all-workspaces @as []
-org.gnome.desktop.wm.keybindings move-to-monitor-up ['<Super><Shift>Up']
-org.gnome.desktop.wm.keybindings move-to-corner-sw ['<Primary><Alt>KP_End']
-org.gnome.desktop.wm.keybindings toggle-shaded ['<Primary><Alt>s']
-org.gnome.desktop.wm.keybindings switch-to-workspace-1 ['<Super>1']
-org.gnome.desktop.wm.keybindings switch-to-workspace-2 ['<Super>2']
-org.gnome.desktop.wm.keybindings switch-to-workspace-3 ['<Super>3']
-org.gnome.desktop.wm.keybindings switch-to-workspace-4 ['<Super>4']
+org.gnome.desktop.wm.keybindings move-to-monitor-up "['<Super><Shift>Up']"
+org.gnome.desktop.wm.keybindings move-to-corner-sw "['<Primary><Alt>KP_End']"
+org.gnome.desktop.wm.keybindings toggle-shaded "['<Primary><Alt>s']"
+org.gnome.desktop.wm.keybindings switch-to-workspace-1 "['<Super>1']"
+org.gnome.desktop.wm.keybindings switch-to-workspace-2 "['<Super>2']"
+org.gnome.desktop.wm.keybindings switch-to-workspace-3 "['<Super>3']"
+org.gnome.desktop.wm.keybindings switch-to-workspace-4 "['<Super>4']"
 org.gnome.desktop.wm.keybindings raise-or-lower @as []
-org.gnome.desktop.wm.keybindings switch-panels ['<Control><Alt>Tab']
-org.gnome.desktop.wm.keybindings switch-panels-backward ['<Shift><Control><Alt>Tab']
-org.gnome.desktop.wm.keybindings switch-applications-backward ['<Shift><Super>Tab', '<Shift><Alt>Tab']
+org.gnome.desktop.wm.keybindings switch-panels "['<Control><Alt>Tab']"
+org.gnome.desktop.wm.keybindings switch-panels-backward "['<Shift><Control><Alt>Tab']"
+org.gnome.desktop.wm.keybindings switch-applications-backward "['<Shift><Super>Tab', '<Shift><Alt>Tab']"
 org.gnome.desktop.wm.keybindings maximize-vertically @as []
 org.gnome.desktop.wm.keybindings switch-to-workspace-7 @as []
 org.gnome.desktop.wm.keybindings switch-to-workspace-5 @as []
-org.gnome.desktop.wm.keybindings show-desktop ['<Primary><Super>d', '<Primary><Alt>d', '<Super>d']
+org.gnome.desktop.wm.keybindings show-desktop "['<Primary><Super>d', '<Primary><Alt>d', '<Super>d']"
 org.gnome.desktop.wm.keybindings switch-to-workspace-8 @as []
 org.gnome.desktop.wm.keybindings switch-to-workspace-9 @as []
 org.gnome.desktop.wm.keybindings switch-to-workspace-6 @as []
-org.gnome.desktop.wm.keybindings switch-applications ['<Super>Tab', '<Alt>Tab']
+org.gnome.desktop.wm.keybindings switch-applications "['<Super>Tab', '<Alt>Tab']"
 org.gnome.desktop.wm.keybindings switch-to-workspace-10 @as []
 org.gnome.desktop.wm.keybindings switch-to-workspace-11 @as []
 org.gnome.desktop.wm.keybindings switch-to-workspace-12 @as []
-org.gnome.desktop.wm.keybindings switch-to-workspace-left ['<Control><Alt>Left']
-org.gnome.desktop.wm.keybindings toggle-maximized ['<Primary><Alt>KP_5']
+org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Control><Alt>Left']"
+org.gnome.desktop.wm.keybindings toggle-maximized "['<Primary><Alt>KP_5']"
 org.gnome.desktop.wm.keybindings set-spew-mark @as []
-org.gnome.desktop.wm.keybindings begin-resize ['<Alt>F8']
-org.gnome.desktop.wm.keybindings move-to-workspace-down ['<Primary><Shift><Super>Right', '<Control><Shift><Alt>Down']
-org.gnome.desktop.wm.keybindings switch-to-workspace-last ['<Super>End']
-org.gnome.desktop.wm.keybindings switch-group-backward ['<Shift><Super>Above_Tab', '<Shift><Alt>Above_Tab']
-org.gnome.desktop.wm.keybindings switch-group ['<Super>Above_Tab', '<Alt>Above_Tab']
-org.gnome.desktop.wm.keybindings cycle-group ['<Alt>F6']
-org.gnome.desktop.wm.keybindings close ['<Alt>F4']
-org.gnome.desktop.wm.keybindings switch-to-workspace-up ['<Primary><Super>Left', '<Control><Alt>Up']
-org.gnome.desktop.wm.keybindings move-to-workspace-1 ['<Shift><Super>exclam']
-org.gnome.desktop.wm.keybindings move-to-workspace-2 ['<Shift><Super>at']
-org.gnome.desktop.wm.keybindings move-to-workspace-3 ['<Shift><Super>numbersign']
-org.gnome.desktop.wm.keybindings move-to-workspace-4 ['<Shift><Super>dollar']
-org.gnome.desktop.wm.keybindings switch-to-workspace-right ['<Control><Alt>Right']
-org.gnome.eog.plugins active-plugins ['fullscreen']
+org.gnome.desktop.wm.keybindings begin-resize "['<Alt>F8']"
+org.gnome.desktop.wm.keybindings move-to-workspace-down "['<Primary><Shift><Super>Right', '<Control><Shift><Alt>Down']"
+org.gnome.desktop.wm.keybindings switch-to-workspace-last "['<Super>End']"
+org.gnome.desktop.wm.keybindings switch-group-backward "['<Shift><Super>Above_Tab', '<Shift><Alt>Above_Tab']"
+org.gnome.desktop.wm.keybindings switch-group "['<Super>Above_Tab', '<Alt>Above_Tab']"
+org.gnome.desktop.wm.keybindings cycle-group "['<Alt>F6']"
+org.gnome.desktop.wm.keybindings close "['<Alt>F4']"
+org.gnome.desktop.wm.keybindings switch-to-workspace-up "['<Primary><Super>Left', '<Control><Alt>Up']"
+org.gnome.desktop.wm.keybindings move-to-workspace-1 "['<Shift><Super>exclam']"
+org.gnome.desktop.wm.keybindings move-to-workspace-2 "['<Shift><Super>at']"
+org.gnome.desktop.wm.keybindings move-to-workspace-3 "['<Shift><Super>numbersign']"
+org.gnome.desktop.wm.keybindings move-to-workspace-4 "['<Shift><Super>dollar']"
+org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Control><Alt>Right']"
+org.gnome.eog.plugins active-plugins "['fullscreen']"
 org.gnome.eog.view zoom-multiplier 0.050000000000000003
 org.gnome.eog.view scroll-wheel-zoom true
 org.gnome.eog.view trans-color '#000000'
@@ -1118,7 +1118,7 @@ org.gnome.sudoku highlighter false
 org.gnome.sudoku window-height 630
 org.gnome.sudoku window-is-maximized false
 org.gnome.sudoku window-width 730
-org.gnome.gedit.preferences.encodings candidate-encodings ['']
+org.gnome.gedit.preferences.encodings candidate-encodings "['']"
 org.gnome.gedit.preferences.print print-syntax-highlighting true
 org.gnome.gedit.preferences.print margin-bottom 25.0
 org.gnome.gedit.preferences.print print-font-numbers-pango 'Sans 8'
@@ -1160,10 +1160,10 @@ org.gnome.gedit.preferences.ui statusbar-visible true
 org.gnome.gedit.preferences.ui show-tabs-mode 'auto'
 org.gnome.gedit.preferences.ui side-panel-visible false
 org.gnome.gedit.preferences.ui toolbar-visible true
-org.gnome.gedit.plugins active-plugins ['time', 'spell', 'docinfo', 'filebrowser', 'modelines']
+org.gnome.gedit.plugins active-plugins "['time', 'spell', 'docinfo', 'filebrowser', 'modelines']"
 org.gnome.gedit.state.file-filter filter-id 0
-org.gnome.gedit.state.history-entry search-for-entry ['bash', 'echo ', ' >> /config/auth/client1.ovpn', 'Freedcamp']
-org.gnome.gedit.state.history-entry replace-with-entry ['Python', 'python', 'Youtube', 'Google-Photos', 'Curtin-Oasis', 'Network-Presence', 'Google-Maps', 'XRPS']
+org.gnome.gedit.state.history-entry search-for-entry "['bash', 'echo ', ' >> /config/auth/client1.ovpn', 'Freedcamp']"
+org.gnome.gedit.state.history-entry replace-with-entry "['Python', 'python', 'Youtube', 'Google-Photos', 'Curtin-Oasis', 'Network-Presence', 'Google-Maps', 'XRPS']"
 org.gnome.gedit.state.window size (793, 656)
 org.gnome.gedit.state.window state 132
 org.gnome.gedit.state.window bottom-panel-active-page ''
@@ -1186,12 +1186,12 @@ org.gnome.mutter workspaces-only-on-primary false
 org.gnome.mutter focus-change-on-pointer-rest false
 org.gnome.mutter center-new-windows false
 org.gnome.mutter no-tab-popup false
-org.gnome.mutter.keybindings toggle-tiled-right ['<Super>Right', '<Super>Right']
-org.gnome.mutter.keybindings toggle-tiled-left ['<Super>Left', '<Super>Left']
+org.gnome.mutter.keybindings toggle-tiled-right "['<Super>Right', '<Super>Right']"
+org.gnome.mutter.keybindings toggle-tiled-left "['<Super>Left', '<Super>Left']"
 org.gnome.mutter.keybindings tab-popup-cancel @as []
 org.gnome.mutter.keybindings tab-popup-select @as []
 org.freedesktop.folks primary-store ''
-org.gnome.gedit.preferences.encodings candidate-encodings ['']
+org.gnome.gedit.preferences.encodings candidate-encodings "['']"
 org.gnome.evolution.importer gnome-calendar-done-tasks false
 org.gnome.evolution.importer gnome-calendar-done-calendar false
 org.gnome.FileRoller.Listing show-time true
@@ -1206,12 +1206,12 @@ org.freedesktop.Tracker.Writeback verbosity 'errors'
 org.gnome.gnome-system-monitor net-out-color '#EE1D00'
 org.gnome.gnome-system-monitor smooth-refresh true
 org.gnome.gnome-system-monitor show-dependencies false
-org.gnome.gnome-system-monitor current-tab 'resources'
+org.gnome.gnome-system-monitor current-tab 'processes'
 org.gnome.gnome-system-monitor swap-color '#49A835'
 org.gnome.gnome-system-monitor kill-dialog true
 org.gnome.gnome-system-monitor network-in-bits false
 org.gnome.gnome-system-monitor show-whose-processes 'user'
-org.gnome.gnome-system-monitor window-state (700, 500, 122, 118)
+org.gnome.gnome-system-monitor window-state (715, 743, 155, 511)
 org.gnome.gnome-system-monitor net-in-color '#2D7DB3'
 org.gnome.gnome-system-monitor graph-update-interval 1000
 org.gnome.gnome-system-monitor update-interval 3000
@@ -1224,7 +1224,7 @@ org.gnome.gnome-system-monitor cpu-colors [(uint32 0, '#FF6E00'), (1, '#CB0C29')
 org.gnome.gnome-system-monitor solaris-mode true
 org.gnome.gnome-system-monitor.proctree col-14-width 48
 org.gnome.gnome-system-monitor.proctree col-20-width 59
-org.gnome.gnome-system-monitor.proctree sort-order 0
+org.gnome.gnome-system-monitor.proctree sort-order 1
 org.gnome.gnome-system-monitor.proctree col-15-width 80
 org.gnome.gnome-system-monitor.proctree col-21-width 59
 org.gnome.gnome-system-monitor.proctree col-22-width 100
@@ -1233,7 +1233,7 @@ org.gnome.gnome-system-monitor.proctree col-0-width 225
 org.gnome.gnome-system-monitor.proctree col-17-width 48
 org.gnome.gnome-system-monitor.proctree col-18-width 70
 org.gnome.gnome-system-monitor.proctree col-1-width 98
-org.gnome.gnome-system-monitor.proctree sort-col 15
+org.gnome.gnome-system-monitor.proctree sort-col 8
 org.gnome.gnome-system-monitor.proctree col-0-visible true
 org.gnome.gnome-system-monitor.proctree col-1-visible true
 org.gnome.gnome-system-monitor.proctree col-2-width 37
@@ -1311,7 +1311,7 @@ org.gnome.SessionManager show-fallback-warning true
 org.gnome.boxes window-size [768, 600]
 org.gnome.boxes view 'list-view'
 org.gnome.boxes screenshot-interval 5
-org.gnome.boxes collections ['Work', 'Research', 'Gaming']
+org.gnome.boxes collections "['Work', 'Research', 'Gaming']"
 org.gnome.boxes window-maximized true
 org.gnome.boxes window-position @ai []
 org.gnome.desktop.background picture-opacity 100
@@ -1322,7 +1322,7 @@ org.gnome.desktop.background color-shading-type 'solid'
 org.gnome.desktop.background picture-options 'zoom'
 org.gnome.desktop.background picture-uri 'file:///usr/share/backgrounds/Greenish_by_EstebanMitnick.jpg'
 org.gnome.desktop.background draw-background true
-org.freedesktop.ibus.general dconf-preserve-name-prefixes ['/desktop/ibus/engine/pinyin', '/desktop/ibus/engine/bopomofo', '/desktop/ibus/engine/hangul']
+org.freedesktop.ibus.general dconf-preserve-name-prefixes "['/desktop/ibus/engine/pinyin', '/desktop/ibus/engine/bopomofo', '/desktop/ibus/engine/hangul']"
 org.freedesktop.ibus.general use-system-keyboard-layout true
 org.freedesktop.ibus.general embed-preedit-text true
 org.freedesktop.ibus.general enable-by-default false
@@ -1331,26 +1331,26 @@ org.freedesktop.ibus.general use-xmodmap true
 org.freedesktop.ibus.general switcher-delay-time 400
 org.freedesktop.ibus.general version '1.5.11'
 org.freedesktop.ibus.general engines-order @as []
-org.freedesktop.ibus.general preload-engines ['xkb:us::eng']
-org.freedesktop.ibus.general xkb-latin-layouts ['ara', 'bg', 'cz', 'dev', 'gr', 'gur', 'in', 'jp(kana)', 'mal', 'mkd', 'ru', 'ua']
-org.freedesktop.ibus.general.xkblayoutconfig east-asia ['dz', 'km', 'lo', 'my', 'th', 'vi']
-org.freedesktop.ibus.general.xkblayoutconfig center-asia ['bo', 'zh']
-org.freedesktop.ibus.general.xkblayoutconfig north-europe ['da', 'fi', 'fo', 'is', 'no', 'se', 'sv']
-org.freedesktop.ibus.general.xkblayoutconfig west-europe ['ca', 'cs', 'de', 'en', 'es', 'fr', 'gd', 'hu', 'it', 'nl', 'pt', 'sk', 'sl']
-org.freedesktop.ibus.general.xkblayoutconfig group-list ['west_europe', 'south_europe', 'east_europe', 'north_europe', 'west_asia', 'center_asia', 'east_asia', 'india', 'australia']
-org.freedesktop.ibus.general.xkblayoutconfig south-europe ['bg', 'bs', 'el', 'mk', 'mt', 'ro', 'sq', 'sr']
-org.freedesktop.ibus.general.xkblayoutconfig west-asia ['am', 'ar', 'az', 'ber', 'fa', 'ha', 'he', 'hy', 'ig', 'ku', 'tg', 'tr', 'yo']
-org.freedesktop.ibus.general.xkblayoutconfig india ['bn', 'dv', 'gu', 'hi', 'kn', 'ml', 'ne', 'or', 'pa', 'si', 'ta', 'te', 'ur']
-org.freedesktop.ibus.general.xkblayoutconfig east-europe ['be', 'csb', 'cv', 'et', 'ka', 'kk', 'ky', 'lt', 'lv', 'pl', 'ru', 'tt', 'uk', 'uz']
-org.freedesktop.ibus.general.xkblayoutconfig australia ['mi']
-org.freedesktop.ibus.general.hotkey next-engine ['Alt+Shift_L']
+org.freedesktop.ibus.general preload-engines "['xkb:us::eng']"
+org.freedesktop.ibus.general xkb-latin-layouts "['ara', 'bg', 'cz', 'dev', 'gr', 'gur', 'in', 'jp(kana)', 'mal', 'mkd', 'ru', 'ua']"
+org.freedesktop.ibus.general.xkblayoutconfig east-asia "['dz', 'km', 'lo', 'my', 'th', 'vi']"
+org.freedesktop.ibus.general.xkblayoutconfig center-asia "['bo', 'zh']"
+org.freedesktop.ibus.general.xkblayoutconfig north-europe "['da', 'fi', 'fo', 'is', 'no', 'se', 'sv']"
+org.freedesktop.ibus.general.xkblayoutconfig west-europe "['ca', 'cs', 'de', 'en', 'es', 'fr', 'gd', 'hu', 'it', 'nl', 'pt', 'sk', 'sl']"
+org.freedesktop.ibus.general.xkblayoutconfig group-list "['west_europe', 'south_europe', 'east_europe', 'north_europe', 'west_asia', 'center_asia', 'east_asia', 'india', 'australia']"
+org.freedesktop.ibus.general.xkblayoutconfig south-europe "['bg', 'bs', 'el', 'mk', 'mt', 'ro', 'sq', 'sr']"
+org.freedesktop.ibus.general.xkblayoutconfig west-asia "['am', 'ar', 'az', 'ber', 'fa', 'ha', 'he', 'hy', 'ig', 'ku', 'tg', 'tr', 'yo']"
+org.freedesktop.ibus.general.xkblayoutconfig india "['bn', 'dv', 'gu', 'hi', 'kn', 'ml', 'ne', 'or', 'pa', 'si', 'ta', 'te', 'ur']"
+org.freedesktop.ibus.general.xkblayoutconfig east-europe "['be', 'csb', 'cv', 'et', 'ka', 'kk', 'ky', 'lt', 'lv', 'pl', 'ru', 'tt', 'uk', 'uz']"
+org.freedesktop.ibus.general.xkblayoutconfig australia "['mi']"
+org.freedesktop.ibus.general.hotkey next-engine "['Alt+Shift_L']"
 org.freedesktop.ibus.general.hotkey disable-unconditional @as []
 org.freedesktop.ibus.general.hotkey enable-unconditional @as []
-org.freedesktop.ibus.general.hotkey trigger ['Control+space', 'Zenkaku_Hankaku', 'Alt+Kanji', 'Alt+grave', 'Hangul', 'Alt+Release+Alt_R']
+org.freedesktop.ibus.general.hotkey trigger "['Control+space', 'Zenkaku_Hankaku', 'Alt+Kanji', 'Alt+grave', 'Hangul', 'Alt+Release+Alt_R']"
 org.freedesktop.ibus.general.hotkey previous-engine @as []
 org.freedesktop.ibus.general.hotkey prev-engine @as []
-org.freedesktop.ibus.general.hotkey next-engine-in-menu ['Alt+Shift_L']
-org.freedesktop.ibus.general.hotkey triggers ['<Super>space']
+org.freedesktop.ibus.general.hotkey next-engine-in-menu "['Alt+Shift_L']"
+org.freedesktop.ibus.general.hotkey triggers "['<Super>space']"
 org.gnome.Evince document-directory @ms nothing
 org.gnome.Evince auto-reload true
 org.gnome.Evince override-restrictions true
@@ -1507,8 +1507,8 @@ org.gnome.desktop.peripherals.touchpad left-handed 'mouse'
 org.gnome.desktop.peripherals.touchpad send-events 'enabled'
 org.gnome.desktop.peripherals.touchpad tap-to-click false
 org.gnome.desktop.peripherals.touchpad speed 0.0
-org.gnome.desktop.peripherals.tablet display ['', '', '']
-org.gnome.desktop.peripherals.touchscreen display ['', '', '']
+org.gnome.desktop.peripherals.tablet display "['', '', '']"
+org.gnome.desktop.peripherals.touchscreen display "['', '', '']"
 org.gnome.desktop.peripherals.trackball scroll-wheel-emulation-button 0
 org.gnome.desktop.peripherals.keyboard repeat-interval uint32 30
 org.gnome.desktop.peripherals.keyboard delay uint32 261
@@ -1520,7 +1520,7 @@ ca.desrt.dconf-editor.Settings window-is-fullscreen false
 ca.desrt.dconf-editor.Settings window-height 600
 ca.desrt.dconf-editor.Settings window-width 800
 ca.desrt.dconf-editor.Settings window-is-maximized false
-org.gnome.desktop.notifications application-children ['org-gnome-nautilus', 'spotify', 'discord', 'spotify-adkiller-', 'transmission-gtk', 'franz', 'rhythmbox', 'com-uploadedlobster-peek', 'org-gnome-clocks', 'evolution', 'deja-dup']
+org.gnome.desktop.notifications application-children "['org-gnome-nautilus', 'spotify', 'discord', 'spotify-adkiller-', 'transmission-gtk', 'franz', 'rhythmbox', 'com-uploadedlobster-peek', 'org-gnome-clocks', 'evolution', 'deja-dup']"
 org.gnome.desktop.notifications show-in-lock-screen true
 org.gnome.desktop.notifications show-banners true
 org.gnome.gedit.plugins.time selected-format '%c'
@@ -1591,18 +1591,18 @@ org.gnome.Cheese video-x-resolution 0
 org.gnome.Cheese burst-delay 1000
 org.gnome.Cheese hue 0.0
 org.gnome.Cheese video-path ''
-org.gnome.gedit.plugins.filebrowser binary-patterns ['*.la', '*.lo']
-org.gnome.gedit.plugins.filebrowser filter-mode ['hide-hidden', 'hide-binary']
+org.gnome.gedit.plugins.filebrowser binary-patterns "['*.la', '*.lo']"
+org.gnome.gedit.plugins.filebrowser filter-mode "['hide-hidden', 'hide-binary']"
 org.gnome.gedit.plugins.filebrowser filter-pattern ''
 org.gnome.gedit.plugins.filebrowser tree-view true
 org.gnome.gedit.plugins.filebrowser open-at-first-doc true
-org.gnome.gedit.plugins.filebrowser virtual-root 'file:///home/thorpj/Git/OS-Setup/os/ubuntu'
+org.gnome.gedit.plugins.filebrowser virtual-root 'file:///home/thorpj/Downloads'
 org.gnome.gedit.plugins.filebrowser enable-remote false
 org.gnome.gedit.plugins.filebrowser root 'file:///'
 org.gnome.desktop.peripherals.mouse natural-scroll false
 org.gnome.desktop.peripherals.mouse speed -0.61946902654867264
 org.gnome.desktop.peripherals.mouse left-handed false
-org.gnome.crypto.pgp keyservers ['hkp://keyserver.ubuntu.com:11371', 'hkp://pool.sks-keyservers.net', 'ldap://keyserver.pgp.com']
+org.gnome.crypto.pgp keyservers "['hkp://keyserver.ubuntu.com:11371', 'hkp://pool.sks-keyservers.net', 'ldap://keyserver.pgp.com']"
 org.gnome.crypto.pgp last-signer ''
 org.gnome.crypto.pgp default-key ''
 org.gnome.crypto.pgp ascii-armor true
@@ -1629,7 +1629,7 @@ org.gnome.books window-position @ai []
 org.gnome.books view-as 'icon'
 org.gnome.books window-maximized true
 org.gnome.books window-size [768, 600]
-org.gnome.desktop.app-folders folder-children ['Utilities', 'Sundry']
+org.gnome.desktop.app-folders folder-children "['Utilities', 'Sundry']"
 org.gnome.gedit.preferences.editor wrap-mode 'word'
 org.gnome.gedit.preferences.editor display-right-margin false
 org.gnome.gedit.preferences.editor highlight-current-line false
@@ -1657,10 +1657,10 @@ org.gnome.gedit.preferences.editor syntax-highlighting true
 org.gnome.settings-daemon.peripherals.smartcard removal-action 'none'
 org.gnome.gnome-system-monitor.openfilestree sort-order 0
 org.gnome.gnome-system-monitor.openfilestree sort-col 0
-org.gnome.nautilus.list-view default-visible-columns ['name', 'size', 'type', 'date_modified']
+org.gnome.nautilus.list-view default-visible-columns "['name', 'size', 'type', 'date_modified']"
 org.gnome.nautilus.list-view default-zoom-level 'smallest'
 org.gnome.nautilus.list-view use-tree-view false
-org.gnome.nautilus.list-view default-column-order ['name', 'size', 'type', 'date_modified', 'date_accessed', 'owner', 'group', 'permissions', 'mime_type', 'where']
+org.gnome.nautilus.list-view default-column-order "['name', 'size', 'type', 'date_modified', 'date_accessed', 'owner', 'group', 'permissions', 'mime_type', 'where']"
 org.gnome.SimpleScan jpeg-quality 75
 org.gnome.SimpleScan text-dpi 150
 org.gnome.SimpleScan paper-width 0
@@ -1672,10 +1672,10 @@ org.gnome.SimpleScan photo-dpi 300
 org.gnome.SimpleScan page-side 'both'
 org.gnome.SimpleScan contrast 0
 org.gnome.SimpleScan document-type 'photo'
-org.gnome.nautilus.icon-view captions ['none', 'size', 'date_modified']
+org.gnome.nautilus.icon-view captions "['none', 'size', 'date_modified']"
 org.gnome.nautilus.icon-view thumbnail-size 64
 org.gnome.nautilus.icon-view default-zoom-level 'smaller'
-org.gnome.nautilus.icon-view text-ellipsis-limit ['3']
+org.gnome.nautilus.icon-view text-ellipsis-limit "['3']"
 org.gnome.rhythmbox.plugins.iradio initial-stations-loaded true
 org.gnome.rhythmbox.plugins.iradio.source paned-position 200
 org.gnome.rhythmbox.plugins.iradio.source sorting ('Title', true)
@@ -1708,7 +1708,7 @@ org.gnome.Music search false
 org.gnome.Music did-initial-state false
 org.gnome.seahorse.manager show-expiry false
 org.gnome.seahorse.manager show-trust false
-org.gnome.seahorse.manager keyrings-selected ['secret-service://login']
+org.gnome.seahorse.manager keyrings-selected "['secret-service://login']"
 org.gnome.seahorse.manager sidebar-width 148
 org.gnome.seahorse.manager item-filter 'personal'
 org.gnome.seahorse.manager show-validity false
@@ -1821,7 +1821,7 @@ org.gnome.rhythmbox.source sorting ('Artist', true)
 org.gnome.rhythmbox.source show-browser true
 org.gnome.rhythmbox.source search-type 'search-match'
 org.gnome.rhythmbox.rhythmdb grace-period 45
-org.gnome.rhythmbox.rhythmdb locations ['file:///home/thorpj/Music']
+org.gnome.rhythmbox.rhythmdb locations "['file:///home/thorpj/Music']"
 org.gnome.rhythmbox.rhythmdb monitor-library true
 org.gnome.desktop.default-applications.office.calendar exec 'evolution -c calendar'
 org.gnome.desktop.default-applications.office.calendar needs-term false
@@ -1895,7 +1895,7 @@ org.gnome.evolution.mail forward-style-name 'attached'
 org.gnome.evolution.mail paned-size 144
 org.gnome.evolution.mail composer-message-original ''
 org.gnome.evolution.mail prompt-on-invalid-recip true
-org.gnome.evolution.mail labels ['I_mportant:#EF2929', '_Work:#F57900', '_Personal:#4E9A06', '_To Do:#3465A4', '_Later:#75507B']
+org.gnome.evolution.mail labels "['I_mportant:#EF2929', '_Work:#F57900', '_Personal:#4E9A06', '_To Do:#3465A4', '_Later:#75507B']"
 org.gnome.evolution.mail composer-gallery-path ''
 org.gnome.evolution.mail side-bar-search true
 org.gnome.evolution.mail composer-outlook-filenames false
@@ -1937,7 +1937,7 @@ org.gnome.evolution.mail mark-seen true
 org.gnome.evolution.mail composer-sign-reply-if-signed false
 org.gnome.evolution.mail composer-many-to-cc-recips-num 10
 org.gnome.evolution.mail enable-unmatched true
-org.gnome.evolution.mail junk-custom-header ['X-Spam-Flag=YES', 'X-Spam-Level=*****']
+org.gnome.evolution.mail junk-custom-header "['X-Spam-Flag=YES', 'X-Spam-Level=*****']"
 org.gnome.evolution.mail mark-seen-timeout 1500
 org.gnome.evolution.mail filters-log-actions false
 org.gnome.evolution.mail save-dir ''
@@ -2008,13 +2008,13 @@ org.gnome.Vino view-only false
 org.gnome.Vino enabled false
 org.gnome.Vino prompt-enabled true
 org.gnome.Vino disable-xdamage false
-org.gnome.Vino authentication-methods ['none']
+org.gnome.Vino authentication-methods "['none']"
 org.gnome.Vino network-interface ''
 org.gnome.Vino require-encryption true
 org.gnome.Vino mailto ''
 org.gnome.Vino lock-screen-on-disconnect false
 org.gnome.Vino vnc-password 'keyring'
-org.gnome.evolution.plugin.templates template-placeholders ['myphone=012345', 'myplace=Abcd', 'myname=Alice']
+org.gnome.evolution.plugin.templates template-placeholders "['myphone=012345', 'myplace=Abcd', 'myname=Alice']"
 org.gnome.rhythmbox.podcast download-interval 'hourly'
 org.gnome.rhythmbox.podcast download-location ''
 org.gnome.rhythmbox.podcast-source paned-position 180
@@ -2122,15 +2122,15 @@ org.gnome.rhythmbox.source show-browser true
 org.gnome.rhythmbox.source search-type 'search-match'
 org.gnome.system.location max-accuracy-level 'exact'
 org.gnome.system.location enabled false
-org.gnome.rhythmbox.plugins active-plugins ['rb', 'generic-player', 'artsearch', 'android', 'ipod', 'mtpdevice', 'notification', 'audiocd', 'audioscrobbler', 'mmkeys', 'dbus-media-server', 'iradio', 'mpris', 'power-manager', 'daap']
-org.gnome.rhythmbox.plugins seen-plugins ['replaygain', 'rb', 'rblirc', 'soundcloud', 'fmradio', 'artsearch', 'ipod', 'sendto', 'mtpdevice', 'notification', 'rbzeitgeist', 'audioscrobbler', 'dbus-media-server', 'magnatune', 'lyrics', 'im-status', 'pythonconsole', 'mpris', 'grilo', 'daap']
+org.gnome.rhythmbox.plugins active-plugins "['rb', 'generic-player', 'artsearch', 'android', 'ipod', 'mtpdevice', 'notification', 'audiocd', 'audioscrobbler', 'mmkeys', 'dbus-media-server', 'iradio', 'mpris', 'power-manager', 'daap']"
+org.gnome.rhythmbox.plugins seen-plugins "['replaygain', 'rb', 'rblirc', 'soundcloud', 'fmradio', 'artsearch', 'ipod', 'sendto', 'mtpdevice', 'notification', 'rbzeitgeist', 'audioscrobbler', 'dbus-media-server', 'magnatune', 'lyrics', 'im-status', 'pythonconsole', 'mpris', 'grilo', 'daap']"
 org.gnome.rhythmbox.plugins no-user-plugins false
-org.gnome.shell.keybindings toggle-message-tray ['<Super>v', '<Super>m']
-org.gnome.shell.keybindings open-application-menu ['<Super>F10']
+org.gnome.shell.keybindings toggle-message-tray "['<Super>v', '<Super>m']"
+org.gnome.shell.keybindings open-application-menu "['<Super>F10']"
 org.gnome.shell.keybindings pause-resume-tweens @as []
-org.gnome.shell.keybindings toggle-application-view ['<Super>a']
-org.gnome.shell.keybindings focus-active-notification ['<Super>n']
-org.gnome.shell.keybindings toggle-overview ['<Super>s']
+org.gnome.shell.keybindings toggle-application-view "['<Super>a']"
+org.gnome.shell.keybindings focus-active-notification "['<Super>n']"
+org.gnome.shell.keybindings toggle-overview "['<Super>s']"
 org.gnome.settings-daemon.plugins.sound active true
 org.gnome.settings-daemon.plugins.sound priority 0
 org.gnome.libgnomekbd.indicator background-color ''
@@ -2170,7 +2170,7 @@ org.gnome.settings-daemon.plugins.power active true
 org.gnome.settings-daemon.plugins.power use-time-for-policy true
 org.gnome.settings-daemon.plugins.keyboard active true
 org.gnome.settings-daemon.plugins.keyboard priority 0
-org.freedesktop.ibus.general dconf-preserve-name-prefixes ['/desktop/ibus/engine/pinyin', '/desktop/ibus/engine/bopomofo', '/desktop/ibus/engine/hangul']
+org.freedesktop.ibus.general dconf-preserve-name-prefixes "['/desktop/ibus/engine/pinyin', '/desktop/ibus/engine/bopomofo', '/desktop/ibus/engine/hangul']"
 org.freedesktop.ibus.general use-system-keyboard-layout true
 org.freedesktop.ibus.general embed-preedit-text true
 org.freedesktop.ibus.general enable-by-default false
@@ -2179,26 +2179,26 @@ org.freedesktop.ibus.general use-xmodmap true
 org.freedesktop.ibus.general switcher-delay-time 400
 org.freedesktop.ibus.general version '1.5.11'
 org.freedesktop.ibus.general engines-order @as []
-org.freedesktop.ibus.general preload-engines ['xkb:us::eng']
-org.freedesktop.ibus.general xkb-latin-layouts ['ara', 'bg', 'cz', 'dev', 'gr', 'gur', 'in', 'jp(kana)', 'mal', 'mkd', 'ru', 'ua']
-org.freedesktop.ibus.general.xkblayoutconfig east-asia ['dz', 'km', 'lo', 'my', 'th', 'vi']
-org.freedesktop.ibus.general.xkblayoutconfig center-asia ['bo', 'zh']
-org.freedesktop.ibus.general.xkblayoutconfig north-europe ['da', 'fi', 'fo', 'is', 'no', 'se', 'sv']
-org.freedesktop.ibus.general.xkblayoutconfig west-europe ['ca', 'cs', 'de', 'en', 'es', 'fr', 'gd', 'hu', 'it', 'nl', 'pt', 'sk', 'sl']
-org.freedesktop.ibus.general.xkblayoutconfig group-list ['west_europe', 'south_europe', 'east_europe', 'north_europe', 'west_asia', 'center_asia', 'east_asia', 'india', 'australia']
-org.freedesktop.ibus.general.xkblayoutconfig south-europe ['bg', 'bs', 'el', 'mk', 'mt', 'ro', 'sq', 'sr']
-org.freedesktop.ibus.general.xkblayoutconfig west-asia ['am', 'ar', 'az', 'ber', 'fa', 'ha', 'he', 'hy', 'ig', 'ku', 'tg', 'tr', 'yo']
-org.freedesktop.ibus.general.xkblayoutconfig india ['bn', 'dv', 'gu', 'hi', 'kn', 'ml', 'ne', 'or', 'pa', 'si', 'ta', 'te', 'ur']
-org.freedesktop.ibus.general.xkblayoutconfig east-europe ['be', 'csb', 'cv', 'et', 'ka', 'kk', 'ky', 'lt', 'lv', 'pl', 'ru', 'tt', 'uk', 'uz']
-org.freedesktop.ibus.general.xkblayoutconfig australia ['mi']
-org.freedesktop.ibus.general.hotkey next-engine ['Alt+Shift_L']
+org.freedesktop.ibus.general preload-engines "['xkb:us::eng']"
+org.freedesktop.ibus.general xkb-latin-layouts "['ara', 'bg', 'cz', 'dev', 'gr', 'gur', 'in', 'jp(kana)', 'mal', 'mkd', 'ru', 'ua']"
+org.freedesktop.ibus.general.xkblayoutconfig east-asia "['dz', 'km', 'lo', 'my', 'th', 'vi']"
+org.freedesktop.ibus.general.xkblayoutconfig center-asia "['bo', 'zh']"
+org.freedesktop.ibus.general.xkblayoutconfig north-europe "['da', 'fi', 'fo', 'is', 'no', 'se', 'sv']"
+org.freedesktop.ibus.general.xkblayoutconfig west-europe "['ca', 'cs', 'de', 'en', 'es', 'fr', 'gd', 'hu', 'it', 'nl', 'pt', 'sk', 'sl']"
+org.freedesktop.ibus.general.xkblayoutconfig group-list "['west_europe', 'south_europe', 'east_europe', 'north_europe', 'west_asia', 'center_asia', 'east_asia', 'india', 'australia']"
+org.freedesktop.ibus.general.xkblayoutconfig south-europe "['bg', 'bs', 'el', 'mk', 'mt', 'ro', 'sq', 'sr']"
+org.freedesktop.ibus.general.xkblayoutconfig west-asia "['am', 'ar', 'az', 'ber', 'fa', 'ha', 'he', 'hy', 'ig', 'ku', 'tg', 'tr', 'yo']"
+org.freedesktop.ibus.general.xkblayoutconfig india "['bn', 'dv', 'gu', 'hi', 'kn', 'ml', 'ne', 'or', 'pa', 'si', 'ta', 'te', 'ur']"
+org.freedesktop.ibus.general.xkblayoutconfig east-europe "['be', 'csb', 'cv', 'et', 'ka', 'kk', 'ky', 'lt', 'lv', 'pl', 'ru', 'tt', 'uk', 'uz']"
+org.freedesktop.ibus.general.xkblayoutconfig australia "['mi']"
+org.freedesktop.ibus.general.hotkey next-engine "['Alt+Shift_L']"
 org.freedesktop.ibus.general.hotkey disable-unconditional @as []
 org.freedesktop.ibus.general.hotkey enable-unconditional @as []
-org.freedesktop.ibus.general.hotkey trigger ['Control+space', 'Zenkaku_Hankaku', 'Alt+Kanji', 'Alt+grave', 'Hangul', 'Alt+Release+Alt_R']
+org.freedesktop.ibus.general.hotkey trigger "['Control+space', 'Zenkaku_Hankaku', 'Alt+Kanji', 'Alt+grave', 'Hangul', 'Alt+Release+Alt_R']"
 org.freedesktop.ibus.general.hotkey previous-engine @as []
 org.freedesktop.ibus.general.hotkey prev-engine @as []
-org.freedesktop.ibus.general.hotkey next-engine-in-menu ['Alt+Shift_L']
-org.freedesktop.ibus.general.hotkey triggers ['<Super>space']
+org.freedesktop.ibus.general.hotkey next-engine-in-menu "['Alt+Shift_L']"
+org.freedesktop.ibus.general.hotkey triggers "['<Super>space']"
 org.freedesktop.ibus.panel x -1
 org.freedesktop.ibus.panel property-icon-delay-time 500
 org.freedesktop.ibus.panel y -1
@@ -2225,7 +2225,7 @@ org.freedesktop.Geoclue gps-baudrate uint32 0
 org.freedesktop.Geoclue gps-device ''
 org.gnome.gnome-system-monitor.proctree col-14-width 48
 org.gnome.gnome-system-monitor.proctree col-20-width 59
-org.gnome.gnome-system-monitor.proctree sort-order 0
+org.gnome.gnome-system-monitor.proctree sort-order 1
 org.gnome.gnome-system-monitor.proctree col-15-width 80
 org.gnome.gnome-system-monitor.proctree col-21-width 59
 org.gnome.gnome-system-monitor.proctree col-22-width 100
@@ -2234,7 +2234,7 @@ org.gnome.gnome-system-monitor.proctree col-0-width 225
 org.gnome.gnome-system-monitor.proctree col-17-width 48
 org.gnome.gnome-system-monitor.proctree col-18-width 70
 org.gnome.gnome-system-monitor.proctree col-1-width 98
-org.gnome.gnome-system-monitor.proctree sort-col 15
+org.gnome.gnome-system-monitor.proctree sort-col 8
 org.gnome.gnome-system-monitor.proctree col-0-visible true
 org.gnome.gnome-system-monitor.proctree col-1-visible true
 org.gnome.gnome-system-monitor.proctree col-2-width 37
@@ -2299,13 +2299,13 @@ org.gnome.nautilus.preferences bulk-rename-tool @ay []
 org.gnome.nautilus.preferences mouse-use-extra-buttons true
 org.gnome.nautilus.window-state sidebar-width 192
 org.gnome.nautilus.window-state start-with-sidebar true
-org.gnome.nautilus.window-state geometry '1142x577+1093+99'
+org.gnome.nautilus.window-state geometry '1142x577+1733+329'
 org.gnome.nautilus.window-state maximized false
 org.gnome.nautilus.window-state start-with-location-bar true
-org.gnome.nautilus.icon-view captions ['none', 'size', 'date_modified']
+org.gnome.nautilus.icon-view captions "['none', 'size', 'date_modified']"
 org.gnome.nautilus.icon-view thumbnail-size 64
 org.gnome.nautilus.icon-view default-zoom-level 'smaller'
-org.gnome.nautilus.icon-view text-ellipsis-limit ['3']
+org.gnome.nautilus.icon-view text-ellipsis-limit "['3']"
 org.gnome.nautilus.desktop trash-icon-name 'Trash'
 org.gnome.nautilus.desktop text-ellipsis-limit 3
 org.gnome.nautilus.desktop background-fade true
@@ -2316,30 +2316,30 @@ org.gnome.nautilus.desktop font ''
 org.gnome.nautilus.desktop network-icon-name 'Network Servers'
 org.gnome.nautilus.desktop home-icon-name ''
 org.gnome.nautilus.desktop volumes-visible true
-org.gnome.nautilus.list-view default-visible-columns ['name', 'size', 'type', 'date_modified']
+org.gnome.nautilus.list-view default-visible-columns "['name', 'size', 'type', 'date_modified']"
 org.gnome.nautilus.list-view default-zoom-level 'smallest'
 org.gnome.nautilus.list-view use-tree-view false
-org.gnome.nautilus.list-view default-column-order ['name', 'size', 'type', 'date_modified', 'date_accessed', 'owner', 'group', 'permissions', 'mime_type', 'where']
+org.gnome.nautilus.list-view default-column-order "['name', 'size', 'type', 'date_modified', 'date_accessed', 'owner', 'group', 'permissions', 'mime_type', 'where']"
 org.gnome.desktop.peripherals.trackball scroll-wheel-emulation-button 0
 org.gnome.evolution.eds-shell start-offline false
-org.freedesktop.ibus.general.hotkey next-engine ['Alt+Shift_L']
+org.freedesktop.ibus.general.hotkey next-engine "['Alt+Shift_L']"
 org.freedesktop.ibus.general.hotkey disable-unconditional @as []
 org.freedesktop.ibus.general.hotkey enable-unconditional @as []
-org.freedesktop.ibus.general.hotkey trigger ['Control+space', 'Zenkaku_Hankaku', 'Alt+Kanji', 'Alt+grave', 'Hangul', 'Alt+Release+Alt_R']
+org.freedesktop.ibus.general.hotkey trigger "['Control+space', 'Zenkaku_Hankaku', 'Alt+Kanji', 'Alt+grave', 'Hangul', 'Alt+Release+Alt_R']"
 org.freedesktop.ibus.general.hotkey previous-engine @as []
 org.freedesktop.ibus.general.hotkey prev-engine @as []
-org.freedesktop.ibus.general.hotkey next-engine-in-menu ['Alt+Shift_L']
-org.freedesktop.ibus.general.hotkey triggers ['<Super>space']
+org.freedesktop.ibus.general.hotkey next-engine-in-menu "['Alt+Shift_L']"
+org.freedesktop.ibus.general.hotkey triggers "['<Super>space']"
 org.gnome.desktop.thumbnail-cache maximum-age 180
 org.gnome.desktop.thumbnail-cache maximum-size 512
 org.gnome.desktop.thumbnailers disable-all false
 org.gnome.desktop.thumbnailers disable @as []
-com.canonical.Unity.Lenses home-lens-priority ['files.scope', 'music.scope']
+com.canonical.Unity.Lenses home-lens-priority "['files.scope', 'music.scope']"
 com.canonical.Unity.Lenses disabled-scopes @as []
 com.canonical.Unity.Lenses remote-content-search 'none'
-com.canonical.Unity.Lenses home-lens-default-view ['applications.scope', 'files.scope']
+com.canonical.Unity.Lenses home-lens-default-view "['applications.scope', 'files.scope']"
 com.canonical.Unity.Lenses hidden-scopes @as []
-com.canonical.Unity.Lenses always-search ['applications.scope', 'music.scope', 'videos.scope', 'files.scope']
+com.canonical.Unity.Lenses always-search "['applications.scope', 'music.scope', 'videos.scope', 'files.scope']"
 com.canonical.Unity.Lenses locked-scopes @as []
 org.gnome.gedit.plugins.externaltools use-system-font true
 org.gnome.gedit.plugins.externaltools font 'Monospace 10'
@@ -2413,8 +2413,8 @@ org.gnome.DejaDup last-run ''
 org.gnome.DejaDup nag-check ''
 org.gnome.DejaDup prompt-check '2017-02-16T11:43:25.380595Z'
 org.gnome.DejaDup root-prompt true
-org.gnome.DejaDup include-list ['$HOME']
-org.gnome.DejaDup exclude-list ['$TRASH', '$DOWNLOAD']
+org.gnome.DejaDup include-list "['$HOME']"
+org.gnome.DejaDup exclude-list "['$TRASH', '$DOWNLOAD']"
 org.gnome.DejaDup last-backup ''
 org.gnome.DejaDup periodic-period 7
 org.gnome.DejaDup delete-after 0
@@ -2440,7 +2440,7 @@ org.gnome.DejaDup.File relpath @ay []
 org.gnome.DejaDup.File name ''
 org.gnome.DejaDup.File type 'normal'
 org.gnome.rhythmbox.plugins.lyrics folder ''
-org.gnome.rhythmbox.plugins.lyrics sites ['lyrc.com.ar']
+org.gnome.rhythmbox.plugins.lyrics sites "['lyrc.com.ar']"
 org.gnome.settings-daemon.peripherals.mouse drag-threshold 8
 org.gnome.settings-daemon.peripherals.mouse double-click 323
 org.gnome.settings-daemon.peripherals.mouse locate-pointer false
@@ -2451,7 +2451,7 @@ org.gnome.rhythmbox.source paned-position 180
 org.gnome.rhythmbox.source sorting ('Artist', true)
 org.gnome.rhythmbox.source show-browser true
 org.gnome.rhythmbox.source search-type 'search-match'
-org.gnome.evolution.plugin.email-custom-header custom-header ['Security=Personal;Unclassified;Protected;InConfidence;Secret;Topsecret']
+org.gnome.evolution.plugin.email-custom-header custom-header "['Security=Personal;Unclassified;Protected;InConfidence;Secret;Topsecret']"
 org.freedesktop.Tracker.Extract max-media-art-width 0
 org.freedesktop.Tracker.Extract verbosity 'errors'
 org.freedesktop.Tracker.Extract wait-for-miner-fs false

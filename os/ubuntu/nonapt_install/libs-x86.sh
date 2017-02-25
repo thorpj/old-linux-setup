@@ -21,5 +21,5 @@ error ()
 sudo dpkg --add-architecture i386
 sudo apt update
 error_occurred="no"
-sudo apt upgrade || error_occurred="yes"
+sudo apt upgrade -y || error_occurred="yes"
 error $error_occurred
