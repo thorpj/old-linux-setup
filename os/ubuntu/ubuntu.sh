@@ -4,10 +4,10 @@ if [[ $(/usr/bin/id -u) -ne 0 ]]; then
     echo "Exiting. Please run script as root"
     exit
 fi
-cd /home/$SUDO_USER/Git/OS-Setup/os/ubuntu
-sudo chown root:root /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/configuration/extend_sudo_timeout
-sudo chmod 0440 /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/configuration/extend_sudo_timeout
-sudo cp /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/configuration/extend_sudo_timeout /etc/sudoers.d/
+cd $HOME/Git/OS-Setup/os/ubuntu
+sudo chown root:root $HOME/Git/OS-Setup/os/ubuntu/configuration/extend_sudo_timeout
+sudo chmod 0440 $HOME/Git/OS-Setup/os/ubuntu/configuration/extend_sudo_timeout
+sudo cp $HOME/Git/OS-Setup/os/ubuntu/configuration/extend_sudo_timeout /etc/sudoers.d/
 sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
 
 askyesno ()
@@ -38,17 +38,17 @@ error ()
     if [ "$error_occurred" = "yes" ]
         then
             echo "ERROR: $appname failed to install"
-            echo "ERROR: $appname failed to install" >> /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/log.txt
+            echo "ERROR: $appname failed to install" >> $HOME/Git/OS-Setup/os/ubuntu/log.txt
         else
             echo "INFO: $appname installed successfully"
-            echo "INFO: $appname installed successfully" >> /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/log.txt
+            echo "INFO: $appname installed successfully" >> $HOME/Git/OS-Setup/os/ubuntu/log.txt
     fi
 }
 
 askyesno "Have you configured apt_package_list.txt, nonapt_package_list.txt, bashrc_aliases.txt and authorized_keys.txt? " true
 if [ "$result" != true ]
     then
-        echo "Please configure those files, which are located in /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/"
+        echo "Please configure those files, which are located in $HOME/Git/OS-Setup/os/ubuntu/"
         exit
 fi
 
@@ -68,8 +68,8 @@ apt_install ()
     sudo apt update
     sudo apt upgrade -y
     sudo apt-get install -y --install-recommends winehq-devel
-    sudo mkdir -p /home/$SUDO_USER/.config/autostart/
-    sudo cp /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/nonapt_install/albert.desktop /home/$SUDO_USER/.config/autostart/
+    sudo mkdir -p $HOME/.config/autostart/
+    sudo cp $HOME/Git/OS-Setup/os/ubuntu/nonapt_install/albert.desktop $HOME/.config/autostart/
     apt_list=$'\n' read -d '' -r -a lines < apt_package_list.txt
     for app_apt in "${lines[@]}"
     do
@@ -90,18 +90,18 @@ apt_install ()
                 error "$app_apt" "$install_error"
                 if [ "$app" = "tmux" ]
                     then
-                        touch /home/$SUDO_USER/.tmux.conf
-                        echo 'set-option -g prefix C-a' > /home/$SUDO_USER/.tmux.conf
-                        tmux source-file /home/$SUDO_USER/.tmux.conf
-                        cd /home/$SUDO_USER
-                        git clone https://github.com/jimeh/tmuxifier.git /home/$SUDO_USER/.tmuxifier
+                        touch $HOME/.tmux.conf
+                        echo 'set-option -g prefix C-a' > $HOME/.tmux.conf
+                        tmux source-file $HOME/.tmux.conf
+                        cd $HOME
+                        git clone https://github.com/jimeh/tmuxifier.git $HOME/.tmuxifier
                         echo 'eval "$(tmuxifier init -)"' >> ~/.profile
-                        echo 'export PATH="/home/$SUDO_USER/.tmuxifier/bin:$PATH"' >> /home/$SUDO_USER/.bashrc
-                        echo "tmuxa='tmuxifier load-window tmux_a'" >> /home/$SUDO_USER/.bashrc
-                        echo "tmuxb='tmuxifier load-window tmux_b'" >> /home/$SUDO_USER/.bashrc
-                        mkdir -p /home/$SUDO_USER/.tmuxifier/layouts
-                        echo -e "new_window \"tmux_a\"\nsplit_v 50 0\nsplit_h 50 0\nsplit_h 50 1" > /home/$SUDO_USER/.tmuxifier/layouts/tmux_a.window.sh"
-                        echo -e "new_window \"tmux_a\"\nsplit_h 50 0" > /home/$SUDO_USER/.tmuxifier/layouts/tmux_b.window.sh"
+                        echo 'export PATH="$HOME/.tmuxifier/bin:$PATH"' >> $HOME/.bashrc
+                        echo "tmuxa='tmuxifier load-window tmux_a'" >> $HOME/.bashrc
+                        echo "tmuxb='tmuxifier load-window tmux_b'" >> $HOME/.bashrc
+                        mkdir -p $HOME/.tmuxifier/layouts
+                        echo -e "new_window \"tmux_a\"\nsplit_v 50 0\nsplit_h 50 0\nsplit_h 50 1" > $HOME/.tmuxifier/layouts/tmux_a.window.sh"
+                        echo -e "new_window \"tmux_a\"\nsplit_h 50 0" > $HOME/.tmuxifier/layouts/tmux_b.window.sh"
                 fi
         fi
 
@@ -111,24 +111,24 @@ done
 
 authorized_keys ()
 {
-    cat 'authorized_keys.txt' >> /home/$SUDO_USER/.ssh/authorized_keys
+    cat 'authorized_keys.txt' >> $HOME/.ssh/authorized_keys
 }
 
 edit_bashrc ()
 {
-    cat 'bashrc_alises.txt' >> /home/$SUDO_USER/.bashrc
+    cat 'bashrc_alises.txt' >> $HOME/.bashrc
     for file in /home/thorpj/Git/Linux-Scripts/*.sh
         do
             file=$(basename $file)
             name=${file%.sh}
             name=${name##*/}
-            echo "$name='$HOME/Git/Linux-Scripts/$file'" >> /home/$SUDO_USER/.bashrc
+            echo "$name='$HOME/Git/Linux-Scripts/$file'" >> $HOME/.bashrc
     done
 }
 
 nonapt_install ()
 {
-    nonapt_list=$'\n' read -d '' -r -a nonapt < /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/nonapt_package_list.txt
+    nonapt_list=$'\n' read -d '' -r -a nonapt < $HOME/Git/OS-Setup/os/ubuntu/nonapt_package_list.txt
     for app_nonapt in "${nonapt[@]}"
     do
         if [[ ${app:0:1} == "#" ]]
@@ -145,29 +145,29 @@ nonapt_install ()
 gnome_install ()
 {
     error_occurred="no"
-    python2 /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/gnome-shell-extensions.py || error_occurred="yes"
+    python2 $HOME/Git/OS-Setup/os/ubuntu/gnome-shell-extensions.py || error_occurred="yes"
     error "gnome-shell-extensions" $error_occurred
 }
 
 configuration ()
 {
-    gsettings_list=$'\n' read -d '' -r -a gsettings < /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/configuration/gsettings/$ubuntu_codename
-    if [ ! -f /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/configuration/gsettings/$ubuntu_codename ]
+    gsettings_list=$'\n' read -d '' -r -a gsettings < $HOME/Git/OS-Setup/os/ubuntu/configuration/gsettings/$ubuntu_codename
+    if [ ! -f $HOME/Git/OS-Setup/os/ubuntu/configuration/gsettings/$ubuntu_codename ]
         then
             echo "It is not possible to import gsettings because a configuration file for your version of Ubuntu does not exist"
-            echo "It is not possible to import gsettings because a configuration file for your version of Ubuntu does not exist" >> /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/log.txt
+            echo "It is not possible to import gsettings because a configuration file for your version of Ubuntu does not exist" >> $HOME/Git/OS-Setup/os/ubuntu/log.txt
         else
             for gsetting in "${gsettings[@]}"
                 do
                     gsettings set $gsetting
                 done
     fi
-    if [ ! -f /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/configuration/dconf/$ubuntu_codename ]
+    if [ ! -f $HOME/Git/OS-Setup/os/ubuntu/configuration/dconf/$ubuntu_codename ]
         then
-            dconf load / < /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/configuration/dconf/$ubuntu_codename
+            dconf load / < $HOME/Git/OS-Setup/os/ubuntu/configuration/dconf/$ubuntu_codename
         else
             echo "It is not possible to import dconf settings because a configuration file for your version of Ubuntu does not exist"
-            echo "It is not possible to import dconf settings because a configuration file for your version of Ubuntu does not exist" >> /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/log.txt
+            echo "It is not possible to import dconf settings because a configuration file for your version of Ubuntu does not exist" >> $HOME/Git/OS-Setup/os/ubuntu/log.txt
     fi
 
 }
@@ -181,7 +181,7 @@ cleanup ()
         * How to setup tmuxifier
     * gnome extensions need to be configured
     """
-    sudo rm -rf /home/$SUDO_USER/.temp
+    sudo rm -rf $HOME/.temp
     sudo /sbin/shutdown -r -t 10
     sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target
     sudo rm /etc/sudoers.d/extend_sudo_timeout
