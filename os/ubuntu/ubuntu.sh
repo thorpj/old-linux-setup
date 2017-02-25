@@ -181,9 +181,9 @@ cleanup ()
         * How to setup tmuxifier
     * gnome extensions need to be configured
     """
-    sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target
     sudo rm -rf /home/$SUDO_USER/.temp
     sudo /sbin/shutdown -r -t 10
+    sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target
     sudo rm /etc/sudoers.d/extend_sudo_timeout
 }
 
