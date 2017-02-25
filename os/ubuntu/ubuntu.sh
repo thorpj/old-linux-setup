@@ -59,9 +59,8 @@ apt_install ()
     ubuntu_codename=${ubuntu_codename_parts,,}
     sudo echo "deb http://archive.canonical.com/ubuntu $ubuntu_codename partner" >> /etc/apt/sources.list
     sudo echo "deb-src http://archive.canonical.com/ubuntu $ubuntu_codename partner" >> /etc/apt/sources.list
-    sudo apt-add-repository -y http://download.virtualbox.org/virtualbox/debian $ubuntu_codename
-    sudo apt-add-repository -y http://ppa.launchpad.net/nilarimogard/webupd8/ubuntu $ubuntu_codename
-    sudo apt-add-repository -y http://ppa.launchpad.net/ricotz/unstable/ubuntu $ubuntu_codename
+    sudo echo "deb http://download.virtualbox.org/virtualbox/debian $ubuntu_codename contrib" >> /etc/apt/sources.list
+    sudo add-apt-repository -y ppa:nilarimogard/webupd8
     sudo apt-add-repository -y ppa:wine/wine-builds
     wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
     wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
