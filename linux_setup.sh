@@ -31,15 +31,15 @@ error ()
 
 }
 
-printf "\n"
-if dpkg --get-selections | grep -q "^curl[[:space:]]*install$" >/dev/null; then
-    echo "Info: Curl is already installed"
-else
-    curl_error="no"
-    sudo apt install -y curl || curl_error="yes"
-    error "curl" "$curl_error"
-    echo "Info: Curl has finished installing"
-fi
+#printf "\n"
+#if dpkg --get-selections | grep -q "^curl[[:space:]]*install$" >/dev/null; then
+#    echo "Info: Curl is already installed"
+#else
+#    curl_error="no"
+#    sudo apt install -y curl || curl_error="yes"
+#    error "curl" "$curl_error"
+#    echo "Info: Curl has finished installing"
+#fi
 
 
 select_distro ()
@@ -51,8 +51,7 @@ select_distro ()
     do
         case $opt in
         "Ubuntu")
-            cd ./OS/Ubuntu
-            sudo ./Ubuntu.sh
+            sudo /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/ubuntu.sh
             break
             ;;
         *)
