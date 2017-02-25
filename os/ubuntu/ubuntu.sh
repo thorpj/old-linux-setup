@@ -8,6 +8,8 @@ cd /home/$SUDO_USER/Git/OS-Setup/os/ubuntu
 sudo chown root:root /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/configuration/extend_sudo_timeout
 sudo chmod 0440 /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/configuration/extend_sudo_timeout
 sudo cp /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/configuration/extend_sudo_timeout /etc/sudoers.d/
+sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
+
 askyesno ()
 {
     question=$1
@@ -179,9 +181,10 @@ cleanup ()
         * How to setup tmuxifier
     * gnome extensions need to be configured
     """
-    sudo rm /etc/sudoers.d/extend_sudo_timeout
+    sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target
     sudo rm -rf /home/$SUDO_USER/.temp
-    sudo reboot
+    sudo /sbin/shutdown -r -t 10
+    sudo rm /etc/sudoers.d/extend_sudo_timeout
 }
 
 
@@ -227,7 +230,7 @@ Main ()
     if [ "$edit_bashrc_yes" = true ]; then
         edit_bashrc
     fi
-    if [ "configuration_yes" = true ]; then
+    if [ "$configuration_yes" = true ]; then
         configuration
     fi
     cleanup
