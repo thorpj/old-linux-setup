@@ -89,6 +89,8 @@ askyesno ()
 
 Main ()
 {
+    git config --global user.name "thorpj"
+    git config --global user.email "thorpejoe4@gmail.com"
     git clone git@github.com:thorpj/Linux-Scripts.git /home/$SUDO_USER/Git/Linux-Scripts
     select_distro
 }
