@@ -67,7 +67,7 @@ apt_install ()
     sudo apt update
     sudo apt upgrade -y
     sudo apt-get install -y --install-recommends winehq-devel
-    sudo mkdir -p $HOME/.config/autostart/
+    mkdir -p $HOME/.config/autostart/
     sudo cp $HOME/Git/OS-Setup/os/ubuntu/nonapt_install/albert.desktop $HOME/.config/autostart/
     apt_list=$'\n' read -d '' -r -a lines < apt_package_list.txt
     for app_apt in "${lines[@]}"
@@ -99,8 +99,8 @@ apt_install ()
                         echo "tmuxa='tmuxifier load-window tmux_a'" >> $HOME/.bashrc
                         echo "tmuxb='tmuxifier load-window tmux_b'" >> $HOME/.bashrc
                         mkdir -p $HOME/.tmuxifier/layouts
-                        echo -e "new_window \"tmux_a\"\nsplit_v 50 0\nsplit_h 50 0\nsplit_h 50 1" > $HOME/.tmuxifier/layouts/tmux_a.window.sh"
-                        echo -e "new_window \"tmux_a\"\nsplit_h 50 0" > $HOME/.tmuxifier/layouts/tmux_b.window.sh"
+                        echo -e "new_window \"tmux_a\"\nsplit_v 50 0\nsplit_h 50 0\nsplit_h 50 1" > $HOME/.tmuxifier/layouts/tmux_a.window.sh
+                        echo -e "new_window \"tmux_a\"\nsplit_h 50 0" > $HOME/.tmuxifier/layouts/tmux_b.window.sh
                 fi
         fi
 

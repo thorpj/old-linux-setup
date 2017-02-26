@@ -10,8 +10,7 @@ if [ "$(uname -m)" = "x86_64" ]
         echo "32bit systems are not supported... exiting..."
         exit
 fi
-mkdir /home/$SUDO_USER/.temp
-mkdir /home/$SUDO_USER/Git
+
 cd /home/$SUDO_USER/Git/OS-Setup/
 
 
