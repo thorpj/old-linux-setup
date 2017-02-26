@@ -14,9 +14,9 @@ tar -xzf $dldir/$filename -C /opt/$app/
 if [ $error = "yes" ]
     then
         echo '$app failed to install'
-        echo '$app failed to install' >> /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/log.txt
+        echo '$app failed to install' >> /home/$SUDO_USER/git/OS-Setup/os/ubuntu/log.txt
         exit
     else
         echo '$app has been installed'
-        echo '$app has been installed' >> /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/log.txt
+        echo '$app has been installed' >> /home/$SUDO_USER/git/OS-Setup/os/ubuntu/log.txt
 fi

@@ -10,11 +10,11 @@ error ()
     if [ $error_occurred = "yes" ]
         then
             echo 'An error occurred, possibly due to attempts to install 32bit libraries'
-            echo 'An error occurred, possibly due to attempts to install 32bit libraries' >> /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/log.txt
+            echo 'An error occurred, possibly due to attempts to install 32bit libraries' >> /home/$SUDO_USER/git/OS-Setup/os/ubuntu/log.txt
             exit
         else
             echo 'apt upgrade succedded. 32bit libaries installed successfully'
-            echo 'apt upgrade succedded. 32bit libaries installed successfully' >> /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/log.txt
+            echo 'apt upgrade succedded. 32bit libaries installed successfully' >> /home/$SUDO_USER/git/OS-Setup/os/ubuntu/log.txt
     fi
 }
 

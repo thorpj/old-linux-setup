@@ -4,10 +4,10 @@ if [[ $(/usr/bin/id -u) -ne 0 ]]; then
     echo "Exiting. Please run script as root"
     exit
 fi
-cd $HOME/Git/OS-Setup/os/ubuntu
-sudo chown root:root $HOME/Git/OS-Setup/os/ubuntu/configuration/extend_sudo_timeout
-sudo chmod 0440 $HOME/Git/OS-Setup/os/ubuntu/configuration/extend_sudo_timeout
-sudo cp $HOME/Git/OS-Setup/os/ubuntu/configuration/extend_sudo_timeout /etc/sudoers.d/
+cd $HOME/git/OS-Setup/os/ubuntu
+sudo chown root:root $HOME/git/OS-Setup/os/ubuntu/configuration/extend_sudo_timeout
+sudo chmod 0440 $HOME/git/OS-Setup/os/ubuntu/configuration/extend_sudo_timeout
+sudo cp $HOME/git/OS-Setup/os/ubuntu/configuration/extend_sudo_timeout /etc/sudoers.d/
 sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
 
 askyesno ()
@@ -38,17 +38,17 @@ error ()
     if [ "$error_occurred" = "yes" ]
         then
             echo "ERROR: $appname failed to install"
-            echo "ERROR: $appname failed to install" >> $HOME/Git/OS-Setup/os/ubuntu/log.txt
+            echo "ERROR: $appname failed to install" >> $HOME/git/OS-Setup/os/ubuntu/log.txt
         else
             echo "INFO: $appname installed successfully"
-            echo "INFO: $appname installed successfully" >> $HOME/Git/OS-Setup/os/ubuntu/log.txt
+            echo "INFO: $appname installed successfully" >> $HOME/git/OS-Setup/os/ubuntu/log.txt
     fi
 }
 
 askyesno "Have you configured apt_package_list.txt, nonapt_package_list.txt, bashrc_aliases.txt and authorized_keys.txt? " true
 if [ "$result" != true ]
     then
-        echo "Please configure those files, which are located in $HOME/Git/OS-Setup/os/ubuntu/"
+        echo "Please configure those files, which are located in $HOME/git/OS-Setup/os/ubuntu/"
         exit
 fi
 
@@ -68,7 +68,7 @@ apt_install ()
     sudo apt upgrade -y
     sudo apt-get install -y --install-recommends winehq-devel
     mkdir -p $HOME/.config/autostart/
-    sudo cp $HOME/Git/OS-Setup/os/ubuntu/nonapt_install/albert.desktop $HOME/.config/autostart/
+    sudo cp $HOME/git/OS-Setup/os/ubuntu/nonapt_install/albert.desktop $HOME/.config/autostart/
     apt_list=$'\n' read -d '' -r -a lines < apt_package_list.txt
     for app_apt in "${lines[@]}"
     do
@@ -116,18 +116,18 @@ authorized_keys ()
 edit_bashrc ()
 {
     cat 'bashrc_alises.txt' >> $HOME/.bashrc
-    for file in $HOME/Git/Linux-Scripts/*.sh
+    for file in $HOME/git/Linux-Scripts/*.sh
         do
             file=$(basename $file)
             name=${file%.sh}
             name=${name##*/}
-            echo "alias $name='$HOME/Git/Linux-Scripts/$file'" >> $HOME/.bashrc
+            echo "alias $name='$HOME/git/Linux-Scripts/$file'" >> $HOME/.bashrc
     done
 }
 
 nonapt_install ()
 {
-    nonapt_list=$'\n' read -d '' -r -a nonapt < $HOME/Git/OS-Setup/os/ubuntu/nonapt_package_list.txt
+    nonapt_list=$'\n' read -d '' -r -a nonapt < $HOME/git/OS-Setup/os/ubuntu/nonapt_package_list.txt
     for app_nonapt in "${nonapt[@]}"
     do
         if [[ ${app:0:1} == "#" ]]
@@ -144,29 +144,29 @@ nonapt_install ()
 gnome_install ()
 {
     error_occurred="no"
-    python2 $HOME/Git/OS-Setup/os/ubuntu/gnome-shell-extensions.py || error_occurred="yes"
+    python2 $HOME/git/OS-Setup/os/ubuntu/gnome-shell-extensions.py || error_occurred="yes"
     error "gnome-shell-extensions" $error_occurred
 }
 
 configuration ()
 {
-    gsettings_list=$'\n' read -d '' -r -a gsettings < $HOME/Git/OS-Setup/os/ubuntu/configuration/gsettings/$ubuntu_codename
-    if [ ! -f $HOME/Git/OS-Setup/os/ubuntu/configuration/gsettings/$ubuntu_codename ]
+    gsettings_list=$'\n' read -d '' -r -a gsettings < $HOME/git/OS-Setup/os/ubuntu/configuration/gsettings/$ubuntu_codename
+    if [ ! -f $HOME/git/OS-Setup/os/ubuntu/configuration/gsettings/$ubuntu_codename ]
         then
             echo "It is not possible to import gsettings because a configuration file for your version of Ubuntu does not exist"
-            echo "It is not possible to import gsettings because a configuration file for your version of Ubuntu does not exist" >> $HOME/Git/OS-Setup/os/ubuntu/log.txt
+            echo "It is not possible to import gsettings because a configuration file for your version of Ubuntu does not exist" >> $HOME/git/OS-Setup/os/ubuntu/log.txt
         else
             for gsetting in "${gsettings[@]}"
                 do
                     gsettings set $gsetting
                 done
     fi
-    if [ ! -f $HOME/Git/OS-Setup/os/ubuntu/configuration/dconf/$ubuntu_codename ]
+    if [ ! -f $HOME/git/OS-Setup/os/ubuntu/configuration/dconf/$ubuntu_codename ]
         then
-            dconf load / < $HOME/Git/OS-Setup/os/ubuntu/configuration/dconf/$ubuntu_codename
+            dconf load / < $HOME/git/OS-Setup/os/ubuntu/configuration/dconf/$ubuntu_codename
         else
             echo "It is not possible to import dconf settings because a configuration file for your version of Ubuntu does not exist"
-            echo "It is not possible to import dconf settings because a configuration file for your version of Ubuntu does not exist" >> $HOME/Git/OS-Setup/os/ubuntu/log.txt
+            echo "It is not possible to import dconf settings because a configuration file for your version of Ubuntu does not exist" >> $HOME/git/OS-Setup/os/ubuntu/log.txt
     fi
 
 }
