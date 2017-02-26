@@ -116,12 +116,12 @@ authorized_keys ()
 edit_bashrc ()
 {
     cat 'bashrc_alises.txt' >> $HOME/.bashrc
-    for file in /home/thorpj/Git/Linux-Scripts/*.sh
+    for file in $HOME/Git/Linux-Scripts/*.sh
         do
             file=$(basename $file)
             name=${file%.sh}
             name=${name##*/}
-            echo "$name='$HOME/Git/Linux-Scripts/$file'" >> $HOME/.bashrc
+            echo "alias $name='$HOME/Git/Linux-Scripts/$file'" >> $HOME/.bashrc
     done
 }
 
