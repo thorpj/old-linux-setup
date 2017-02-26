@@ -1,4 +1,5 @@
 #!/bin/bash
+sudo apt update
 sudo apt install -y tmux
 touch $HOME/.tmux.conf
 echo 'set-option -g prefix C-a' > $HOME/.tmux.conf
