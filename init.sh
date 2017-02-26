@@ -9,6 +9,8 @@ echo -e "\n"
 echo $ssh_key
 echo -e "\nAdd this ssh key to your Github account, if you haven't already."
 read -p "Press enter once you have added the ssh key to your Github account. Press enter now if you already have. "
+sudo apt update
+sudo apt install -y git
 if [ ! -f $HOME/OS-Setup/ ]
     then
         git clone git@github.com:thorpj/OS-Setup.git $HOME/Git/OS-Setup
