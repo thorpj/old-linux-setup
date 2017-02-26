@@ -91,7 +91,10 @@ Main ()
     
     git config --global user.name "thorpj"
     git config --global user.email "thorpejoe4@gmail.com"
-    git clone git@github.com:thorpj/Linux-Scripts.git /home/$SUDO_USER/Git/Linux-Scripts
+    working_dir=$(pwd)
+    cd $HOME/Git/
+    git clone git@github.com:thorpj/Linux-Scripts.git 
+    cd $working_dir
     select_distro
 }
 Main
