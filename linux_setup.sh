@@ -13,34 +13,6 @@ fi
 
 cd /home/$SUDO_USER/Git/OS-Setup/
 
-
-error ()
-{
-    appname="$1"
-    error_occurred="$2"
-    if [ "$error_occurred" = "yes" ]
-        then
-            echo "$appname failed to install"
-            echo "$appname failed to install" >> /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/log.txt
-        else
-            echo "$appname installed successfully"
-            echo "$appname installed successfully" >> /home/$SUDO_USER/Git/OS-Setup/os/ubuntu/log.txt
-    fi
-
-
-}
-
-#printf "\n"
-#if dpkg --get-selections | grep -q "^curl[[:space:]]*install$" >/dev/null; then
-#    echo "Info: Curl is already installed"
-#else
-#    curl_error="no"
-#    sudo apt install -y curl || curl_error="yes"
-#    error "curl" "$curl_error"
-#    echo "Info: Curl has finished installing"
-#fi
-
-
 select_distro ()
 {
     printf "\n"
@@ -63,38 +35,8 @@ select_distro ()
     done
 }
 
-
-askyesno ()
-{
-    question=$1
-    default=$2
-    if [ "$default" = true ]; then
-            options="[Y/n]"
-            default="y"
-        else
-            options="[y/N]"
-            default="n"
-    fi
-    read -p "$question $options " -n 1 -s -r input
-    input=${input:-${default}}
-    echo ${input}
-    if [[ "$input" =~ ^[yY]$ ]]; then
-        result=true
-    else
-        result=false
-    fi
-}
-
-
 Main ()
 {
-    
-    git config --global user.name "thorpj"
-    git config --global user.email "thorpejoe4@gmail.com"
-    working_dir=$(pwd)
-    cd $HOME/Git/
-    git clone git@github.com:thorpj/Linux-Scripts.git 
-    cd $working_dir
     select_distro
 }
 Main
