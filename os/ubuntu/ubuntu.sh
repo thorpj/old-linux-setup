@@ -45,7 +45,7 @@ error ()
     fi
 }
 
-askyesno "Have you configured apt_package_list.txt, nonapt_package_list.txt, bashrc_aliases.txt and authorized_keys.txt? " true
+askyesno "Have you configured apt_package_list.txt, nonapt_package_list.txt, aliases_list.txt and authorized_keys.txt? " true
 if [ "$result" != true ]
     then
         echo "Please configure those files, which are located in $HOME/git/OS-Setup/os/ubuntu/"
@@ -115,7 +115,7 @@ authorized_keys ()
 
 edit_bashrc ()
 {
-    cat 'bashrc_alises.txt' >> $HOME/.bashrc
+    cat "$HOME/git/OS-Setup/os/ubuntu/aliases_list.txt" >> $HOME/.bashrc
     for file in $HOME/git/Linux-Scripts/*.sh
         do
             file=$(basename $file)
@@ -123,6 +123,10 @@ edit_bashrc ()
             name=${name##*/}
             echo "alias $name='$HOME/git/Linux-Scripts/$file'" >> $HOME/.bashrc
     done
+    askyesno "Are you using WSL (Windows Subsystem for Linux) and cbwin?" false
+    if [ "$result" = true ]; then
+        echo "alias code='wrun \"/mnt/c/Program Files (x86)/Microsoft VS Code/Code.exe\"'" >> $HOME/.bashrc
+    fi
 }
 
 nonapt_install ()
@@ -206,7 +210,7 @@ Main ()
     if [ "$result" = true ]; then
         authorized_keys_yes=true
     fi
-    askyesno "Append contents of bashrc_alises.txt to ~/.bashrc? " true
+    askyesno "Append contents of aliases_list.txt to ~/.bashrc? " true
     if [ "$result" = true ]; then
         edit_bashrc_yes=true
     fi
