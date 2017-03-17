@@ -1,3 +1,4 @@
+#aliases_list
 alias is='sudo apt install'
 alias iss='apt-cache search'
 alias ud='sudo apt update'
