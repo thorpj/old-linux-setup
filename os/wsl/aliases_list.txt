@@ -1,3 +1,4 @@
+#aliases_list
 alias is='sudo apt install'
 alias iss='apt-cache search'
 alias ud='sudo apt update'
@@ -15,3 +16,4 @@ alias cd_home_git='cd $HOME/git && clear && ls'
 alias cd_uni_git='cd $HOME/uni-git && clear && ls'
 alias naut_git='nautilus $HOME/git'
 alias naut_uni_git='nautilus $HOME/uni-git'
+alias cc='clang -lm -std=c11 -pedantic'
