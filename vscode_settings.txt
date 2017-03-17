@@ -1,0 +1,23 @@
+{
+    "window.zoomLevel": 0,
+    // Controls if lines should wrap. The lines will wrap at min(editor.wrappingColumn, viewportWidthInColumns).
+    "editor.wordWrap": true,
+    "editor.minimap.enabled": true,
+    // Automatically update extensions
+    "extensions.autoUpdate": true,
+    // The default end of line character.
+    "files.eol": "\n",
+    // A multiplier to be used on the `deltaX` and `deltaY` of mouse wheel scroll events
+    "editor.mouseWheelScrollSensitivity": 0.7,
+    // Controls the delay in ms after which quick suggestions will show up
+    "editor.quickSuggestionsDelay": 0,
+    // Controls if suggestions should be accepted on 'Enter' - in addition to 'Tab'. Helps to avoid ambiguity 
+between inserting new lines or accepting suggestions.
+    "editor.acceptSuggestionOnEnter": true,
+    // Controls if the editor should automatically close brackets after opening them
+    "editor.autoClosingBrackets": true,
+    // The path of the shell that the terminal uses on Windows. When using shells shipped with Windows (cmd, 
+PowerShell or Bash on Ubuntu), prefer C:\Windows\sysnative over C:\Windows\System32 to use the 64-bit versions.
+  "terminal.integrated.shell.windows": "C:\\outbash.exe",
+  "zenMode.fullScreen": false
+}
