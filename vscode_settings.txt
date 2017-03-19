@@ -26,11 +26,20 @@
     // Controls if suggestions should be accepted on 'Enter' - in addition to 'Tab'. Helps to avoid ambiguity between inserting new lines or accepting suggestions.
     "editor.acceptSuggestionOnEnter": true,
     // Controls if the editor should automatically close brackets after opening them
-    "editor.autoClosingBrackets": true,
+    "editor.autoClosingBrackets": false,
     // The path of the shell that the terminal uses on Windows. When using shells shipped with Windows (cmd, PowerShell or Bash on Ubuntu), prefer C:\Windows\sysnative over C:\Windows\System32 to use the 64-bit versions.
     "terminal.integrated.shell.windows": "C:\\outbash.exe",
     "zenMode.fullScreen": false,
     "clang.completion.enable": true,
-    "clang.executable": "C:\\Program Files\\LLVM\\bin\\clang.exe",
-    "clang-format.executable": "C:\\Users\\Joe Thorpe\\.vscode\\extensions\\ms-vscode.cpptools-0.10.4\\LLVM\\bin\\clang-format.exe"
+
+    /* Python Configuration */
+
+    // Path to Python, you can use a custom version of Python by modifying this setting to include the full path.
+    "python.pythonPath": "C:\\Python27amd64\\python2.exe",
+    // Whether to lint Python files using pylint.
+    "python.linting.pylintEnabled": false,
+    // Whether to lint Python files using pep8
+    "python.linting.pep8Enabled": true,
+    // Automatically add brackets for functions.
+    "python.autoComplete.addBrackets": false
 }
