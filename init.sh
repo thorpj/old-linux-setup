@@ -1,16 +1,17 @@
 #!/bin/bash
 sys_username=$USER
-if [ ! -f $HOME/.ssh/id_rsa.pub ]
-    then
+if [ ! -f $HOME/.ssh/id_rsa.pub ]; then
         ssh-keygen -t rsa -N "" -f $HOME/.ssh/id_rsa
 fi  
-ssh_key=$(cat $HOME/.ssh/id_rsa.pub)
 echo -e "\n"
-echo $ssh_key
-echo -e "\nAdd this ssh key to your Github account, if you haven't already."
-read -p "Press enter once you have added the ssh key to your Github account. Press enter now if you already have. "
-sudo apt update
-sudo apt install -y git
+cat "$HOME/.ssh/id_rsa.pub"
+printf "\nAdd this ssh key to your Github account, if you haven't already.\n"
+read -p "Press enter to continue: "
+if [ "$(dpkg-query -l "git")" != "" ]; then
+    echo "git is not installed. Installing..."
+    sudo apt update
+    sudo apt install -y -q git 
+fi
 git config --global user.name "thorpj"
 git config --global user.email "thorpejoe4@gmail.com"
 if [ ! -f $HOME/git/ ]

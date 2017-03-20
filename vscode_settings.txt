@@ -26,7 +26,7 @@
     // Controls if suggestions should be accepted on 'Enter' - in addition to 'Tab'. Helps to avoid ambiguity between inserting new lines or accepting suggestions.
     "editor.acceptSuggestionOnEnter": true,
     // Controls if the editor should automatically close brackets after opening them
-    "editor.autoClosingBrackets": true,
+    "editor.autoClosingBrackets": false,
     // The path of the shell that the terminal uses on Windows. When using shells shipped with Windows (cmd, PowerShell or Bash on Ubuntu), prefer C:\Windows\sysnative over C:\Windows\System32 to use the 64-bit versions.
     "terminal.integrated.shell.windows": "C:\\outbash.exe",
     "zenMode.fullScreen": false,
