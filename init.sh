@@ -18,6 +18,10 @@ if [ ! -f $HOME/git/ ]
     then
         mkdir $HOME/git
 fi
+if [ ! -f $HOME/uni-git/ ]
+    then
+        mkdir $HOME/uni-git
+fi
 if [ ! -f $HOME/git/OS-Setup/ ]
     then
         git clone git@github.com:thorpj/OS-Setup.git $HOME/git/OS-Setup

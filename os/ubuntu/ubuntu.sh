@@ -5,6 +5,7 @@ if [[ $(/usr/bin/id -u) -ne 0 ]]; then
     exit
 fi
 cd $HOME/git/OS-Setup/os/ubuntu
+echo "The sudo timeout will be set to 15 minutes. It will be reset once the script has finished"
 sudo chown root:root $HOME/git/OS-Setup/os/ubuntu/configuration/extend_sudo_timeout
 sudo chmod 0440 $HOME/git/OS-Setup/os/ubuntu/configuration/extend_sudo_timeout
 sudo cp $HOME/git/OS-Setup/os/ubuntu/configuration/extend_sudo_timeout /etc/sudoers.d/
@@ -180,15 +181,9 @@ configuration ()
 
 cleanup ()
 {
-    """
-    * Once finished, tell user to view apt_package_list.txt and nonapt_package_list.txt list to see what they should add to the taskbar
-    * Delete files from ~/.temp
-    * POST INSTALL NOTES
-        * How to setup tmuxifier
-    * gnome extensions need to be configured
-    """
     sudo rm -rf $HOME/.temp
-    rm -f $HOME/init.sh
+    sudo rm -f $HOME/init.sh
+    echo "Rebooting in 10 seconds. Do not interupt."
     sudo /sbin/shutdown -r -t 10
     sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target
     sudo rm /etc/sudoers.d/extend_sudo_timeout

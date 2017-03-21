@@ -34,8 +34,6 @@ edit_bashrc ()
             echo "alias $name='$HOME/git/Linux-Scripts/$file'" >> $HOME/.bashrc
     done
     echo "alias code='wrun \"/mnt/c/Program Files (x86)/Microsoft VS Code/Code.exe\"'" >> $HOME/.bashrc
-    echo "alias cd_git_home='cd $home_git_win'" >> $HOME/.bashrc
-    echo "alias cd_git_uni='cd $uni_git_win'" >> $HOME/.bashrc
 }
 
 main ()
