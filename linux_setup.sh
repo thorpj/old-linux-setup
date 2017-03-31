@@ -35,8 +35,8 @@ select_distro ()
     done
 }
 
-Main ()
+main ()
 {
     select_distro
 }
-Main
+main
