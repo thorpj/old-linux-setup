@@ -58,9 +58,9 @@ apt_install ()
     ubuntu_codename=$(grep $(lsb_release -rs) /usr/share/python-apt/templates/Ubuntu.info | grep -m 1 "Description: Ubuntu " | cut -d "'" -f2)
     IFS=' ' read -a ubuntu_codename_parts <<< "$ubuntu_codename"
     ubuntu_codename=${ubuntu_codename_parts,,}
-    sudo echo "deb http://archive.canonical.com/ubuntu $ubuntu_codename partner" >> /etc/apt/sources.list
-    sudo echo "deb-src http://archive.canonical.com/ubuntu $ubuntu_codename partner" >> /etc/apt/sources.list
-    sudo echo "deb http://download.virtualbox.org/virtualbox/debian $ubuntu_codename contrib" >> /etc/apt/sources.list
+    echo "deb http://archive.canonical.com/ubuntu $ubuntu_codename partner" | sudo tee -a /etc/apt/sources.list > /dev/null
+    echo "deb-src http://archive.canonical.com/ubuntu $ubuntu_codename partner" | sudo tee -a /etc/apt/sources.list > /dev/null
+    echo "deb http://download.virtualbox.org/virtualbox/debian $ubuntu_codename contrib" | sudo tee -a /etc/apt/sources.list > /dev/null
     sudo add-apt-repository -y ppa:nilarimogard/webupd8
     sudo apt-add-repository -y ppa:wine/wine-builds
     wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
@@ -138,7 +138,7 @@ nonapt_install ()
     nonapt_list=$'\n' read -d '' -r -a nonapt < $HOME/git/OS-Setup/os/ubuntu/nonapt_package_list.txt
     for app_nonapt in "${nonapt[@]}"
     do
-        if [[ ${app:0:1} == "#" ]]
+        if [[ ${app_nonapt:0:1} == "#" ]]
             then
                 :
             else

@@ -18,3 +18,7 @@ alias naut_git='nautilus $HOME/git'
 alias naut_uni_git='nautilus $HOME/uni-git'
 alias cc='clang -lm -std=c11 -pedantic'
 alias git_conflict='grep -H -r "<<<<<<< HEAD"'
+alias gitstat='git status'
+alias gitcom='git commit -m'
+alias gitcam='git commit -am'
+
