@@ -26,3 +26,4 @@ pm-utils
 virtualbox-5.1
 ubuntu-restricted-extras
 albert
+python-pip
