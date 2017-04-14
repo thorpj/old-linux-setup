@@ -131,12 +131,12 @@ authorized_keys ()
 # edit_bashrc ()
 # {
 #     cat "$HOME/git/os-setup/os/ubuntu/aliases_list.txt" >> $HOME/.bashrc
-#     for file in $HOME/git/Linux-Scripts/*.sh
+#     for file in $HOME/git/linux-scripts/*.sh
 #         do
 #             file=$(basename $file)
 #             name=${file%.sh}
 #             name=${name##*/}
-#             echo "alias $name='$HOME/git/Linux-Scripts/$file'" >> $HOME/.bashrc
+#             echo "alias $name='$HOME/git/linux-scripts/$file'" >> $HOME/.bashrc
 #     done
 #     askyesno "Are you using WSL (Windows Subsystem for Linux) and cbwin?" false
 #     if [ "$result" = true ]; then
@@ -148,7 +148,7 @@ edit_bashrc ()
 {
 #     cat "$HOME/git/os-setup/os/ubuntu/aliases_list.txt" >> $HOME/.bashrc
 #     for file in $HOME/git/linux-scripts/*.sh
-    path="$HOME/git/Linux-Scripts/"
+    path="$HOME/git/linux-scripts/"
     alias_short="#aliases_list"
     if [ ! -z "$(grep "$alias_short" $HOME/.bashrc)" ]
         then
@@ -156,12 +156,12 @@ edit_bashrc ()
         else
             cat "$path/aliases_list.txt" >> $HOME/.bashrc
     fi
-    for file in $HOME/git/Linux-Scripts/*.sh
+    for file in $HOME/git/linux-scripts/*.sh
         do
             file=$(basename $file)
             name=${file%.sh}
             name=${name##*/}
-            alias="alias $name='$HOME/git/Linux-Scripts/$file'"
+            alias="alias $name='$HOME/git/linux-scripts/$file'"
             if [ ! -z "$(grep "$file" $HOME/.bashrc)" ]
                 then
                     :
