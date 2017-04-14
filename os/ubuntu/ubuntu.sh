@@ -120,12 +120,12 @@ authorized_keys ()
 edit_bashrc ()
 {
     cat "$HOME/git/OS-Setup/os/ubuntu/aliases_list.txt" >> $HOME/.bashrc
-    for file in $HOME/git/Linux-Scripts/*.sh
+    for file in $HOME/git/linux-scripts/*.sh
         do
             file=$(basename $file)
             name=${file%.sh}
             name=${name##*/}
-            echo "alias $name='$HOME/git/Linux-Scripts/$file'" >> $HOME/.bashrc
+            echo "alias $name='$HOME/git/linux-scripts/$file'" >> $HOME/.bashrc
     done
     askyesno "Are you using WSL (Windows Subsystem for Linux) and cbwin?" false
     if [ "$result" = true ]; then

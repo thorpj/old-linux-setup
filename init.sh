@@ -29,12 +29,12 @@ if [ ! -f $HOME/git/OS-Setup/ ]
         echo "WARNING: the directory $HOME/git/OS-Setup already exists"
         echo "WARNING: the directory $HOME/git/OS-Setup already exists" >> $HOME/git/OS-Setup/os/ubuntu/log.txt
 fi
-if [ ! -f $HOME/git/Linux-Scripts/ ]
+if [ ! -f $HOME/git/linux-scripts/ ]
     then
-        git clone git@github.com:thorpj/Linux-Scripts.git $HOME/git/Linux-Scripts
+        git clone git@github.com:thorpj/linux-scripts.git $HOME/git/linux-scripts
     else
-        echo "WARNING: the directory $HOME/git/Linux-Scripts already exists"
-        echo "WARNING: the directory $HOME/git/Linux-Scripts already exists" >> $HOME/git/OS-Setup/os/ubuntu/log.txt
+        echo "WARNING: the directory $HOME/git/linux-scripts already exists"
+        echo "WARNING: the directory $HOME/git/linux-scripts already exists" >> $HOME/git/OS-Setup/os/ubuntu/log.txt
 fi
 if [ ! -f $HOME/.temp/ ]
     then

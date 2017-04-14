@@ -2,7 +2,7 @@
 * (y/n) wherever possible with enter=y
   * Show all the choices first (with a '| less' page) and then ask if default yes, or configure individually.
 
-Linux-Scripts - Useful bash scripts 
+linux-scripts - Useful bash scripts 
 
 
 Linux Applications - Use symlinks or something so that these apps can stay in local git repo, and then be updated there, then pushed to remote git repo
@@ -23,7 +23,7 @@ OS-Setup - Scripts to set up  a device after a fresh OS install
   == Linux ==
 DONE script to clone other necessary repos (depending on OS).
 DONE Script to add entries to bashrc
-  DONE Build it so that it doesn't require updates when more scripts are added to ../Linux-Scripts or ../Windows-Scripts
+  DONE Build it so that it doesn't require updates when more scripts are added to ../linux-scripts or ../Windows-Scripts
 IMP Script to configure install
     DONE Gnome extensions
 DONE apt script

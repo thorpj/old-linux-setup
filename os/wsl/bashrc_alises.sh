@@ -26,12 +26,12 @@ askyesno ()
 edit_bashrc ()
 {
     cat 'aliases_list.txt' >> $HOME/.bashrc
-    for file in $home_git_win/Linux-Scripts/*.sh
+    for file in $home_git_win/linux-scripts/*.sh
         do
             file=$(basename $file)
             name=${file%.sh}
             name=${name##*/}
-            echo "alias $name='$HOME/git/Linux-Scripts/$file'" >> $HOME/.bashrc
+            echo "alias $name='$HOME/git/linux-scripts/$file'" >> $HOME/.bashrc
     done
     echo "alias code='wrun \"/mnt/c/Program Files (x86)/Microsoft VS Code/Code.exe\"'" >> $HOME/.bashrc
 }
