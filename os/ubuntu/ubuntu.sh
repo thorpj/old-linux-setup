@@ -38,11 +38,11 @@ error ()
     error_occurred="$2"
     if [ "$error_occurred" = "yes" ]
         then
-            echo "ERROR: $appname failed to install"
-            echo "ERROR: $appname failed to install" >> $HOME/git/OS-Setup/os/ubuntu/log.txt
+            echo "ERROR: "$appname" failed to install"
+            echo "ERROR: "$appname" failed to install" >> $HOME/git/OS-Setup/os/ubuntu/log.txt
         else
-            echo "INFO: $appname installed successfully"
-            echo "INFO: $appname installed successfully" >> $HOME/git/OS-Setup/os/ubuntu/log.txt
+            echo "INFO: "$appname" installed successfully"
+            echo "INFO: "$appname" installed successfully" >> $HOME/git/OS-Setup/os/ubuntu/log.txt
     fi
 }
 
@@ -55,23 +55,34 @@ fi
 
 apt_install ()
 {
-    ubuntu_codename=$(grep $(lsb_release -rs) /usr/share/python-apt/templates/Ubuntu.info | grep -m 1 "Description: Ubuntu " | cut -d "'" -f2)
+    # Get ubuntu version (codename). e.g. 'Trusty' for Ubuntu 14.04
+    ubuntu_codename="$(grep $(lsb_release -rs) /usr/share/python-apt/templates/Ubuntu.info | grep -m 1 "Description: Ubuntu " | cut -d "'" -f2)"
     IFS=' ' read -a ubuntu_codename_parts <<< "$ubuntu_codename"
-    ubuntu_codename=${ubuntu_codename_parts,,}
+    ubuntu_codename="${ubuntu_codename_parts,,}"
+    # Add sources for apt
     echo "deb http://archive.canonical.com/ubuntu $ubuntu_codename partner" | sudo tee -a /etc/apt/sources.list > /dev/null
     echo "deb-src http://archive.canonical.com/ubuntu $ubuntu_codename partner" | sudo tee -a /etc/apt/sources.list > /dev/null
     echo "deb http://download.virtualbox.org/virtualbox/debian $ubuntu_codename contrib" | sudo tee -a /etc/apt/sources.list > /dev/null
+    
+    # webupd8 is for TODO=====================================================================================================================================================================================================
     sudo add-apt-repository -y ppa:nilarimogard/webupd8
     sudo apt-add-repository -y ppa:wine/wine-builds
+    
+    # Add sources for Virtualbox
     wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
     wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
     sudo apt update
     sudo apt upgrade -y
+    
+    # Install wine developer version
     sudo apt-get install -y --install-recommends winehq-devel
     mkdir -p $HOME/.config/autostart/
+    
+    # Albert is a launcher program
     sudo cp $HOME/git/OS-Setup/os/ubuntu/nonapt_install/albert.desktop $HOME/.config/autostart/
+    
     apt_list=$'\n' read -d '' -r -a lines < apt_package_list.txt
-    for app_apt in "${lines[@]}"
+    for app_apt in "${lines[@]}"  # Install programs with apt repos
     do
         if [[ ${app_apt:0:1} == "#" ]]
             then
@@ -79,6 +90,7 @@ apt_install ()
             else
                 if [ "$app_apt" = "google-chrome-stable" ]
                     then
+                        # deb setup for Google Chrome Stable
                         wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
                         sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
                         sudo apt update
@@ -90,6 +102,7 @@ apt_install ()
                 error "$app_apt" "$install_error"
                 if [ "$app_apt" = "tmux" ]
                     then
+                        # Install tmux
                         touch $HOME/.tmux.conf
                         echo 'set-option -g prefix C-a' > $HOME/.tmux.conf
                         tmux source-file $HOME/.tmux.conf
@@ -104,10 +117,8 @@ apt_install ()
                         echo -e "new_window \"tmux_a\"\nsplit_v 50 0\nsplit_h 50 0\nsplit_h 50 1" > $HOME/.tmuxifier/layouts/tmux_a.window.sh
                         echo -e "new_window \"tmux_b\"\nsplit_h 50 0" > $HOME/.tmuxifier/layouts/tmux_b.window.sh
                         echo -e "new_window \"tmux_c\"\nsplit_v 50 0" > $HOME/.tmuxifier/layouts/tmux_c.window.sh
-
                 fi
         fi
-
 done
 }
 
@@ -117,20 +128,75 @@ authorized_keys ()
     cat 'authorized_keys.txt' >> $HOME/.ssh/authorized_keys
 }
 
+# edit_bashrc ()
+# {
+#     cat "$HOME/git/OS-Setup/os/ubuntu/aliases_list.txt" >> $HOME/.bashrc
+#     for file in $HOME/git/Linux-Scripts/*.sh
+#         do
+#             file=$(basename $file)
+#             name=${file%.sh}
+#             name=${name##*/}
+#             echo "alias $name='$HOME/git/Linux-Scripts/$file'" >> $HOME/.bashrc
+#     done
+#     askyesno "Are you using WSL (Windows Subsystem for Linux) and cbwin?" false
+#     if [ "$result" = true ]; then
+#         echo "alias code='wrun \"/mnt/c/Program Files (x86)/Microsoft VS Code/Code.exe\"'" >> $HOME/.bashrc
+#     fi
+# }
+
 edit_bashrc ()
 {
-    cat "$HOME/git/OS-Setup/os/ubuntu/aliases_list.txt" >> $HOME/.bashrc
-    for file in $HOME/git/linux-scripts/*.sh
+#     cat "$HOME/git/OS-Setup/os/ubuntu/aliases_list.txt" >> $HOME/.bashrc
+#     for file in $HOME/git/linux-scripts/*.sh
+    path="$HOME/git/Linux-Scripts/"
+    alias_short="#aliases_list"
+    if [ ! -z "$(grep "$alias_short" $HOME/.bashrc)" ]
+        then
+            :
+        else
+            cat "$path/aliases_list.txt" >> $HOME/.bashrc
+    fi
+    for file in $HOME/git/Linux-Scripts/*.sh
         do
             file=$(basename $file)
             name=${file%.sh}
             name=${name##*/}
-            echo "alias $name='$HOME/git/linux-scripts/$file'" >> $HOME/.bashrc
+            alias="alias $name='$HOME/git/Linux-Scripts/$file'"
+            if [ ! -z "$(grep "$file" $HOME/.bashrc)" ]
+                then
+                    :
+                else
+                    echo $alias >> $HOME/.bashrc
+            fi
     done
     askyesno "Are you using WSL (Windows Subsystem for Linux) and cbwin?" false
     if [ "$result" = true ]; then
-        echo "alias code='wrun \"/mnt/c/Program Files (x86)/Microsoft VS Code/Code.exe\"'" >> $HOME/.bashrc
+        alias="alias code='wrun \"/mnt/c/Program Files (x86)/Microsoft VS Code/Code.exe\"'"
+        alias_short="alias code"
+        if [ ! -z "$(grep "$alias_short" $HOME/.bashrc)" ]
+            then
+                :
+            else
+                echo $alias >> $HOME/.bashrc
+        fi
+        alias="alias cd_c='cd /mnt/c'"
+        alias_short="alias cd_c"
+        if [ ! -z "$(grep "$alias_short" $HOME/.bashrc)" ]
+            then
+                :
+            else
+                echo $alias >> $HOME/.bashrc
+        fi
+        alias="alias cd_d='cd /mnt/d'"
+        alias_short="alias cd_d"
+        if [ ! -z "$(grep "$alias_short" $HOME/.bashrc)" ]
+            then
+                :
+            else
+                echo $alias >> $HOME/.bashrc
+        fi
     fi
+    . $HOME/.bashrc
 }
 
 nonapt_install ()
@@ -138,7 +204,7 @@ nonapt_install ()
     nonapt_list=$'\n' read -d '' -r -a nonapt < $HOME/git/OS-Setup/os/ubuntu/nonapt_package_list.txt
     for app_nonapt in "${nonapt[@]}"
     do
-        if [[ ${app_nonapt:0:1} == "#" ]]
+        if [[ ${app_nonapt:0:1} == "#" ]]  # Prevents installing programs that have have an '#' in front of the name
             then
                 :
             else
@@ -193,7 +259,7 @@ cleanup ()
 Main ()
 {
     askyesno "Install apt apps? " true
-    if [ "$result" = true ]; then
+    if [ $result = true ]; then
         apt_install_yes=true
     fi
     askyesno "Install nonapt apps? " true
@@ -238,4 +304,3 @@ Main ()
     cleanup
 }
 Main
-

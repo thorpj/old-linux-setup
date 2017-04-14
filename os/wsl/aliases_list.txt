@@ -21,3 +21,4 @@ alias git_conflict='grep -H -r "<<<<<<< HEAD"'
 alias gitstat='git status'
 alias gitcom='git commit -m'
 alias gitcam='git commit -am'
+
