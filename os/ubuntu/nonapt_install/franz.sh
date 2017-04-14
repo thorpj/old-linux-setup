@@ -13,4 +13,4 @@ tar -xzf $dldir/$filename -C /opt/$app/
 sudo touch /usr/share/applications/$app.desktop
 sudo echo -e '[Desktop Entry]\nName=Franz\nComment=\nExec=/opt/franz/Franz\nIcon=/opt/franz/franz-icon.png\nTerminal=false\nType=Application\nCategories=Messaging,Internet' > /usr/share/applications/$app.desktop
 echo '$app has been installed'
-echo '$app has been installed' >> /home/$SUDO_USER/git/OS-Setup/os/ubuntu/log.txt
+echo '$app has been installed' >> /home/$SUDO_USER/git/os-setup/os/ubuntu/log.txt

@@ -11,11 +11,11 @@ error ()
     if [ $error_occurred = "yes" ]
         then
             echo '$application failed to install'
-            echo '$application failed to install' >> /home/$SUDO_USER/git/OS-Setup/os/ubuntu/log.txt
+            echo '$application failed to install' >> /home/$SUDO_USER/git/os-setup/os/ubuntu/log.txt
             exit
         else
             echo '$application has been installed'
-            echo '$application has been installed' >> /home/$SUDO_USER/git/OS-Setup/os/ubuntu/log.txt
+            echo '$application has been installed' >> /home/$SUDO_USER/git/os-setup/os/ubuntu/log.txt
     fi
 }
 

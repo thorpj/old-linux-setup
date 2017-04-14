@@ -11,7 +11,7 @@ if [ "$(uname -m)" = "x86_64" ]
         exit
 fi
 
-cd /home/$SUDO_USER/git/OS-Setup/
+cd /home/$SUDO_USER/git/os-setup/
 
 select_distro ()
 {
@@ -22,7 +22,7 @@ select_distro ()
     do
         case $opt in
         "Ubuntu")
-            sudo /home/$SUDO_USER/git/OS-Setup/os/ubuntu/ubuntu.sh
+            sudo /home/$SUDO_USER/git/os-setup/os/ubuntu/ubuntu.sh
             break
             ;;
         *)

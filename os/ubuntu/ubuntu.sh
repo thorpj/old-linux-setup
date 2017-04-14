@@ -4,11 +4,11 @@ if [[ $(/usr/bin/id -u) -ne 0 ]]; then
     echo "Exiting. Please run script as root"
     exit
 fi
-cd $HOME/git/OS-Setup/os/ubuntu
+cd $HOME/git/os-setup/os/ubuntu
 echo "The sudo timeout will be set to 15 minutes. It will be reset once the script has finished"
-sudo chown root:root $HOME/git/OS-Setup/os/ubuntu/configuration/extend_sudo_timeout
-sudo chmod 0440 $HOME/git/OS-Setup/os/ubuntu/configuration/extend_sudo_timeout
-sudo cp $HOME/git/OS-Setup/os/ubuntu/configuration/extend_sudo_timeout /etc/sudoers.d/
+sudo chown root:root $HOME/git/os-setup/os/ubuntu/configuration/extend_sudo_timeout
+sudo chmod 0440 $HOME/git/os-setup/os/ubuntu/configuration/extend_sudo_timeout
+sudo cp $HOME/git/os-setup/os/ubuntu/configuration/extend_sudo_timeout /etc/sudoers.d/
 sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
 
 askyesno ()
@@ -39,17 +39,17 @@ error ()
     if [ "$error_occurred" = "yes" ]
         then
             echo "ERROR: "$appname" failed to install"
-            echo "ERROR: "$appname" failed to install" >> $HOME/git/OS-Setup/os/ubuntu/log.txt
+            echo "ERROR: "$appname" failed to install" >> $HOME/git/os-setup/os/ubuntu/log.txt
         else
             echo "INFO: "$appname" installed successfully"
-            echo "INFO: "$appname" installed successfully" >> $HOME/git/OS-Setup/os/ubuntu/log.txt
+            echo "INFO: "$appname" installed successfully" >> $HOME/git/os-setup/os/ubuntu/log.txt
     fi
 }
 
 askyesno "Have you configured apt_package_list.txt, nonapt_package_list.txt, aliases_list.txt and authorized_keys.txt? " true
 if [ "$result" != true ]
     then
-        echo "Please configure those files, which are located in $HOME/git/OS-Setup/os/ubuntu/"
+        echo "Please configure those files, which are located in $HOME/git/os-setup/os/ubuntu/"
         exit
 fi
 
@@ -79,7 +79,7 @@ apt_install ()
     mkdir -p $HOME/.config/autostart/
     
     # Albert is a launcher program
-    sudo cp $HOME/git/OS-Setup/os/ubuntu/nonapt_install/albert.desktop $HOME/.config/autostart/
+    sudo cp $HOME/git/os-setup/os/ubuntu/nonapt_install/albert.desktop $HOME/.config/autostart/
     
     apt_list=$'\n' read -d '' -r -a lines < apt_package_list.txt
     for app_apt in "${lines[@]}"  # Install programs with apt repos
@@ -130,7 +130,7 @@ authorized_keys ()
 
 # edit_bashrc ()
 # {
-#     cat "$HOME/git/OS-Setup/os/ubuntu/aliases_list.txt" >> $HOME/.bashrc
+#     cat "$HOME/git/os-setup/os/ubuntu/aliases_list.txt" >> $HOME/.bashrc
 #     for file in $HOME/git/Linux-Scripts/*.sh
 #         do
 #             file=$(basename $file)
@@ -146,7 +146,7 @@ authorized_keys ()
 
 edit_bashrc ()
 {
-#     cat "$HOME/git/OS-Setup/os/ubuntu/aliases_list.txt" >> $HOME/.bashrc
+#     cat "$HOME/git/os-setup/os/ubuntu/aliases_list.txt" >> $HOME/.bashrc
 #     for file in $HOME/git/linux-scripts/*.sh
     path="$HOME/git/Linux-Scripts/"
     alias_short="#aliases_list"
@@ -201,7 +201,7 @@ edit_bashrc ()
 
 nonapt_install ()
 {
-    nonapt_list=$'\n' read -d '' -r -a nonapt < $HOME/git/OS-Setup/os/ubuntu/nonapt_package_list.txt
+    nonapt_list=$'\n' read -d '' -r -a nonapt < $HOME/git/os-setup/os/ubuntu/nonapt_package_list.txt
     for app_nonapt in "${nonapt[@]}"
     do
         if [[ ${app_nonapt:0:1} == "#" ]]  # Prevents installing programs that have have an '#' in front of the name
@@ -218,29 +218,29 @@ nonapt_install ()
 gnome_install ()
 {
     error_occurred="no"
-    python2 $HOME/git/OS-Setup/os/ubuntu/gnome-shell-extensions.py || error_occurred="yes"
+    python2 $HOME/git/os-setup/os/ubuntu/gnome-shell-extensions.py || error_occurred="yes"
     error "gnome-shell-extensions" $error_occurred
 }
 
 configuration ()
 {
-    gsettings_list=$'\n' read -d '' -r -a gsettings < $HOME/git/OS-Setup/os/ubuntu/configuration/gsettings/$ubuntu_codename
-    if [ ! -f $HOME/git/OS-Setup/os/ubuntu/configuration/gsettings/$ubuntu_codename ]
+    gsettings_list=$'\n' read -d '' -r -a gsettings < $HOME/git/os-setup/os/ubuntu/configuration/gsettings/$ubuntu_codename
+    if [ ! -f $HOME/git/os-setup/os/ubuntu/configuration/gsettings/$ubuntu_codename ]
         then
             echo "It is not possible to import gsettings because a configuration file for your version of Ubuntu does not exist"
-            echo "It is not possible to import gsettings because a configuration file for your version of Ubuntu does not exist" >> $HOME/git/OS-Setup/os/ubuntu/log.txt
+            echo "It is not possible to import gsettings because a configuration file for your version of Ubuntu does not exist" >> $HOME/git/os-setup/os/ubuntu/log.txt
         else
             for gsetting in "${gsettings[@]}"
                 do
                     gsettings set $gsetting
                 done
     fi
-    if [ ! -f $HOME/git/OS-Setup/os/ubuntu/configuration/dconf/$ubuntu_codename ]
+    if [ ! -f $HOME/git/os-setup/os/ubuntu/configuration/dconf/$ubuntu_codename ]
         then
-            dconf load / < $HOME/git/OS-Setup/os/ubuntu/configuration/dconf/$ubuntu_codename
+            dconf load / < $HOME/git/os-setup/os/ubuntu/configuration/dconf/$ubuntu_codename
         else
             echo "It is not possible to import dconf settings because a configuration file for your version of Ubuntu does not exist"
-            echo "It is not possible to import dconf settings because a configuration file for your version of Ubuntu does not exist" >> $HOME/git/OS-Setup/os/ubuntu/log.txt
+            echo "It is not possible to import dconf settings because a configuration file for your version of Ubuntu does not exist" >> $HOME/git/os-setup/os/ubuntu/log.txt
     fi
 
 }

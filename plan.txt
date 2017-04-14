@@ -19,7 +19,7 @@ Windows Applications - automatically update install files and automate installat
 
 ===================================
 
-OS-Setup - Scripts to set up  a device after a fresh OS install
+os-setup - Scripts to set up  a device after a fresh OS install
   == Linux ==
 DONE script to clone other necessary repos (depending on OS).
 DONE Script to add entries to bashrc
