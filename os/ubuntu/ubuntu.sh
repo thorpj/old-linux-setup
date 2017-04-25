@@ -140,6 +140,11 @@ Main ()
         :
     else
         cat "$user_home/.ssh/${device_name}.pub" >> "$loc_repo/authorized_keys.txt"
+        cd "$loc_repo"
+        git add "$loc_repo/authorized_keys.txt"
+        git commit -m "adding public key for $device_name"
+        git push origin master
+        cd "$user_home"
     bash "$loc_bashrc_aliases"
     echo "$Don\'t select linux-scripts or os-setup, they have already been cloned"
     bash "$loc_clone_repos"
