@@ -1,10 +1,10 @@
 #!/bin/bash
 
-if [ "$github_token" = "" ]; then
-    printf "The environment variable github_token has not been set.\n1) Visit https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/ on creating a personal access token.\n2) add 'export github_token=*personal access token*' to ~/.bashrc\n"
-    printf "Exiting...\n"
-    exit
-fi
+# if [ "$github_token" = "" ]; then
+#     printf "The environment variable github_token has not been set.\n1) Visit https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/ on creating a personal access token.\n2) add 'export github_token=*personal access token*' to ~/.bashrc\n"
+#     printf "Exiting...\n"
+#     exit
+# fi
 
 askyesno ()
 #Ask if user wishes to continue with given action. Can set default to yes or no

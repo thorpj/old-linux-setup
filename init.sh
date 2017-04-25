@@ -54,7 +54,7 @@ main ()
     wget https://raw.githubusercontent.com/thorpj/linux-setup/master/send_ssh_key.sh -P $user_home
     sleep 2s
     bash "$user_home/send_ssh_key.sh"
-    git clone git@github.com:thorpj/os-setup.git "$loc_git"
+    git clone git@github.com:thorpj/linux-setup.git "$loc_git"
     if [ ! -f "$user_home/init.sh" ]; then
         rn "$user_home/init.sh"
     fi
@@ -67,7 +67,6 @@ main ()
     if [ ! -f "$user_home/sens_variables.sh" ]; then
         rm "$user_home/sens_variables.sh"
     fi
-    git@github.com:thorpj/linux-setup.git "$loc_repo"
     source "$loc_repo_os/${os_name}.sh"
 }
 main
