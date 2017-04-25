@@ -1,5 +1,5 @@
 #!/bin/bash
-pwd
+
 askyesno ()
 #Ask if user wishes to continue with given action. Can set default to yes or no
 {
@@ -42,8 +42,9 @@ initial_setup ()
 
 main ()
 {
-    source ./sens_variables.sh
-    source ./variables.sh
+    wget https://github.com/thorpj/linux-setup/blob/master/variables.sh -P $HOME
+    source $HOME/sens_variables.sh
+    source $HOME/variables.sh
     initial_setup
     git config --global user.name "$github_user"
     git config --global user.name "$github_email"
@@ -60,6 +61,12 @@ main ()
     if [ ! -f "$user_home/send_ssh_key.sh" ]; then
         rm "$user_home/send_ssh_key.sh"
     fi
+    if [ ! -f "$user_home/variables.sh" ]; then
+        rm "$user_home/variables.sh" ]; then
+    fi    
+    if [ ! -f "$user_home/sens_variables.sh" ]; then
+        rm "$user_home/sens_variables.sh"
+    fi    
     source "$loc_repo_os/${os_name}.sh"
 }
 main
