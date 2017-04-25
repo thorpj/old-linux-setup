@@ -138,6 +138,8 @@ Main ()
     cat "$user_home/.ssh/${device_name}.pub" >> "$loc_repo/authorized_keys.txt"
     cat "$loc_repo/authorized_keys.txt" >> "$user_home/.ssh/authorized_keys"
     bash "$loc_bashrc_aliases"
+    echo "$Don\'t select linux-scripts or os-setup, they have already been cloned"
+    bash "$loc_clone_repos"
     configuration
     cleanup
 }
