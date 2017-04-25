@@ -48,9 +48,9 @@ main ()
     initial_setup
     git config --global user.name "$github_user"
     git config --global user.name "$github_email"
-    sudo mkdir -p "$loc_git"
-    sudo mkdir -p "$loc_unigit"
-    sudo mkdir -p "$user_home/.temp"
+    mkdir -p "$loc_git"
+    mkdir -p "$loc_unigit"
+    mkdir -p "$user_home/.temp"
     wget https://raw.githubusercontent.com/thorpj/linux-setup/master/send_ssh_key.sh -P $user_home
     sleep 2s
     bash "$user_home/send_ssh_key.sh"
@@ -66,7 +66,8 @@ main ()
     fi    
     if [ ! -f "$user_home/sens_variables.sh" ]; then
         rm "$user_home/sens_variables.sh"
-    fi    
+    fi
+    git@github.com:thorpj/linux-setup.git "$loc_repo"
     source "$loc_repo_os/${os_name}.sh"
 }
 main
