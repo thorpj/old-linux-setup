@@ -42,7 +42,7 @@ initial_setup ()
 
 main ()
 {
-    wget https://github.com/thorpj/linux-setup/blob/master/variables.sh -P $HOME
+    wget https://raw.githubusercontent.com/thorpj/linux-setup/master/variables.sh -P $HOME
     source $HOME/sens_variables.sh
     source $HOME/variables.sh
     initial_setup
@@ -51,7 +51,7 @@ main ()
     sudo mkdir -p "$loc_git"
     sudo mkdir -p "$loc_unigit"
     sudo mkdir -p "$user_home/.temp"
-    wget https://github.com/thorpj/linux-setup/blob/master/send_ssh_key.sh -P $user_home
+    wget https://raw.githubusercontent.com/thorpj/linux-setup/master/send_ssh_key.sh -P $user_home
     sleep 2s
     bash "$user_home/send_ssh_key.sh"
     git clone git@github.com:thorpj/os-setup.git "$loc_git"
