@@ -1,0 +1,51 @@
+#------------------------------------------------------------------------------#
+#                            OFFICIAL UBUNTU REPOS                             #
+#------------------------------------------------------------------------------#
+
+
+###### Ubuntu Main Repos
+deb http://au.archive.ubuntu.com/ubuntu/ ubuntu_codename main restricted universe multiverse 
+
+###### Ubuntu Update Repos
+deb http://au.archive.ubuntu.com/ubuntu/ ubuntu_codename-security main restricted universe multiverse 
+deb http://au.archive.ubuntu.com/ubuntu/ ubuntu_codename-updates main restricted universe multiverse 
+deb http://au.archive.ubuntu.com/ubuntu/ ubuntu_codename-backports main restricted universe multiverse 
+
+###### Ubuntu Partner Repo
+deb http://archive.canonical.com/ubuntu ubuntu_codename partner
+
+#------------------------------------------------------------------------------#
+#                           UNOFFICIAL UBUNTU REPOS                            #
+#------------------------------------------------------------------------------#
+
+
+###### 3rd Party Binary Repos
+
+#### Gimp PPA - https://launchpad.net/~otto-kesselgulasch/+archive/gimp
+## Run this command: sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 614C4B38
+deb http://ppa.launchpad.net/otto-kesselgulasch/gimp/ubuntu ubuntu_codename main
+
+#### GNOME3 Extra Apps PPA - https://launchpad.net/~gnome3-team/+archive/gnome3
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3B1510FD
+deb http://ppa.launchpad.net/gnome3-team/gnome3/ubuntu ubuntu_codename main
+
+#### LibreOffice PPA - http://www.documentfoundation.org/download/
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1378B444
+deb http://ppa.launchpad.net/libreoffice/ppa/ubuntu ubuntu_codename main
+
+#### Spotify - https://www.spotify.com/us/download/linux/
+## Run this command: sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D2C19886
+deb http://repository.spotify.com stable non-free
+
+#### VirtualBox - http://www.virtualbox.org
+## Run this command: wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox_2016.asc -O- | sudo apt-key add -
+deb http://download.virtualbox.org/virtualbox/debian ubuntu_codename contrib
+
+#### WebUpd8 PPA - http://www.webupd8.org/
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4C9D234C
+deb http://ppa.launchpad.net/nilarimogard/webupd8/ubuntu ubuntu_codename main
+
+#### Google Chrome PPA - http://google.com/
+## Run this command: wget -O- https://dl.google.com/linux/linux_signing_key.pub | bash
+deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+
