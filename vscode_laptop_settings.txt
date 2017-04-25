@@ -1,0 +1,46 @@
+{
+    "window.zoomLevel": -1,
+    // Whether auto fetching is enabled.
+    "git.autofetch": false,
+    // Controls after how many characters the editor will wrap to the next line. Setting this to 0 turns on viewport width wrapping (word wrapping). Setting this to -1 forces the editor to never wrap.
+    // "editor.wrappingColumn": 0,
+    // Deprecated in favour of "editor.wordWrap": "bounded",
+    // Controls how lines should wrap. Can be:
+    //  - 'off' (disable wrapping),
+    //  - 'on' (viewport wrapping),
+    //  - 'wordWrapColumn' (wrap at `editor.wordWrapColumn`) or
+    //  - 'bounded' (wrap at minimum of viewport and `editor.wordWrapColumn`).
+    "editor.wordWrap": "on",
+    "window.zoomLevel": -1,
+    // Controls if lines should wrap. The lines will wrap at min(editor.wrappingColumn, viewportWidthInColumns).
+    "editor.wordWrap": true,
+    "editor.minimap.enabled": true,
+    // Automatically update extensions
+    "extensions.autoUpdate": true,
+    // The default end of line character.
+    "files.eol": "\n",
+    // A multiplier to be used on the `deltaX` and `deltaY` of mouse wheel scroll events
+    "editor.mouseWheelScrollSensitivity": 0.7,
+    // Controls the delay in ms after which quick suggestions will show up
+    "editor.quickSuggestionsDelay": 0,
+    // Controls if suggestions should be accepted on 'Enter' - in addition to 'Tab'. Helps to avoid ambiguity between inserting new lines or accepting suggestions.
+    "editor.acceptSuggestionOnEnter": true,
+    // Controls if the editor should automatically close brackets after opening them
+    "editor.autoClosingBrackets": false,
+    // The path of the shell that the terminal uses on Windows. When using shells shipped with Windows (cmd, PowerShell or Bash on Ubuntu), prefer C:\Windows\sysnative over C:\Windows\System32 to use the 64-bit versions.
+    "terminal.integrated.shell.windows": "C:\\outbash.exe",
+    "zenMode.fullScreen": false,
+    "clang.completion.enable": true,
+
+    /* Python Configuration */
+
+    // Path to Python, you can use a custom version of Python by modifying this setting to include the full path.
+    "python.pythonPath": "C:\\Python27amd64\\python2.exe",
+    // Whether to lint Python files using pylint.
+    "python.linting.pylintEnabled": false,
+    // Whether to lint Python files using pep8
+    "python.linting.pep8Enabled": true,
+    // Automatically add brackets for functions.
+    "python.autoComplete.addBrackets": false,
+    "python.linting.enabledWithoutWorkspace": false
+}
