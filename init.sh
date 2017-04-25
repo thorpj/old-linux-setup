@@ -53,7 +53,7 @@ main ()
     mkdir -p "$user_home/.temp"
     wget https://raw.githubusercontent.com/thorpj/linux-setup/master/send_ssh_key.sh -P $user_home
     sleep 2s
-    bash "$user_home/send_ssh_key.sh"
+    source "$user_home/send_ssh_key.sh"
     git clone git@github.com:thorpj/linux-setup.git "$loc_git"
     if [ ! -f "$user_home/init.sh" ]; then
         rn "$user_home/init.sh"
