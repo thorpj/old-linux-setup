@@ -135,8 +135,11 @@ Main ()
     app_install
     mv "$loc_repo/vscode_${device_type}_settings.txt" "$user_home/.config/Code/User/settings.json"
     gnome_extensions_install
-    cat "$user_home/.ssh/${device_name}.pub" >> "$loc_repo/authorized_keys.txt"
     cat "$loc_repo/authorized_keys.txt" >> "$user_home/.ssh/authorized_keys"
+    if grep -Fxq $user_home/.ssh/${device_name}.pub "$user_home/.ssh/authorized_keys"; then
+        :
+    else
+        cat "$user_home/.ssh/${device_name}.pub" >> "$loc_repo/authorized_keys.txt"
     bash "$loc_bashrc_aliases"
     echo "$Don\'t select linux-scripts or os-setup, they have already been cloned"
     bash "$loc_clone_repos"
