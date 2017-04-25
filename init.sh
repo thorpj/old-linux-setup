@@ -62,7 +62,7 @@ main ()
         rm "$user_home/send_ssh_key.sh"
     fi
     if [ ! -f "$user_home/variables.sh" ]; then
-        rm "$user_home/variables.sh" ]; then
+        rm "$user_home/variables.sh" ]
     fi    
     if [ ! -f "$user_home/sens_variables.sh" ]; then
         rm "$user_home/sens_variables.sh"
