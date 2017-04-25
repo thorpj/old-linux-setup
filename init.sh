@@ -50,12 +50,16 @@ main ()
     sudo mkdir -p "$loc_git"
     sudo mkdir -p "$loc_unigit"
     sudo mkdir -p "$user_home/.temp"
-    wget https://github.com/$github_user/linux-setup/blob/master/send_ssh_key.sh -P $user_home
+    wget https://github.com/thorpj/linux-setup/blob/master/send_ssh_key.sh -P $user_home
     sleep 2s
     bash "$user_home/send_ssh_key.sh"
-    git clone git@github.com:$github_user/os-setup.git "$loc_git"
-    rm "$user_home/send_ssh_key.sh"
-    rn "$user_home/init.sh"
+    git clone git@github.com:thorpj/os-setup.git "$loc_git"
+    if [ ! -f "$user_home/init.sh" ]; then
+        rn "$user_home/init.sh"
+    fi
+    if [ ! -f "$user_home/send_ssh_key.sh" ]; then
+        rm "$user_home/send_ssh_key.sh"
+    fi
     source "$loc_repo_os/${os_name}.sh"
 }
 main
