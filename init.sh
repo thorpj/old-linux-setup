@@ -29,13 +29,16 @@ initial_setup ()
     else
         echo "git is not installed. Installing..."
         sudo apt-get -q update
+        sleep 1s
         sudo apt-get install -y -q git 
     fi
+    sleep 1s
     if dpkg-query -W -f'${Status}' "curl" 2>/dev/null | grep -q "ok installed"; then
         :
     else
         echo "curl is not installed. Installing..."
         sudo apt-get -q update
+        sleep 1s
         sudo apt-get install -y -q curl
     fi
 }
