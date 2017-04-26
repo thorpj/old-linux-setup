@@ -48,7 +48,7 @@ main ()
     source $HOME/variables.sh
     initial_setup
     git config --global user.name "$github_user"
-    git config --global user.name "$github_email"
+    git config --global user.email "$github_email"
     mkdir -p "$loc_git"
     mkdir -p "$loc_unigit"
     mkdir -p "$user_home/.temp"
