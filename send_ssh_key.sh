@@ -97,15 +97,8 @@ ssh_key_setup ()
         ssh_key_name="id_rsa"
     fi
     key_title="${device_name}_${os_name}_${user_name}"
-    echo "$key_title"
-    echo "$ssh_key_name"
-    echo "$github_email"
-    echo "$github_user"
-    echo "$github_token"
-    exit
     ssh-keygen -t rsa -N "" -f "$user_home/.ssh/$ssh_key_name" -C "$github_email"
     ssh_key="$(cat "$HOME/.ssh/${ssh_key_name}.pub")"
-    echo "$ssh_key"
     curl -u "$github_user:$github_token" --data "{\"title\":\"$key_title\",\"key\":\"$ssh_key\"}" "https://api.github.com/user/keys"
 }
 
