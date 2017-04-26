@@ -60,6 +60,9 @@ app_install ()
     # install apt apps
     apt_list=$'\n' read -d '' -r -a lines < "$loc_app_install_dir/app_list.txt"
     for apt_app in "${lines[@]}"; do
+        if [ "$apt_app" = "#===non_apt===" ]; then
+            break
+        fi
         if [[ "${apt_app:0:1}" == "#" ]] || [[ "${file:0:1}" == "" ]; then
             continue
         else
@@ -122,7 +125,7 @@ Main ()
     source "$loc_repo/sens_variables.sh"
     source "$loc_repo/variables.sh"
 
-    git clone git@github.com:thorpj/linux-scripts.git "$loc_git"
+    git clone git@github.com:thorpj/linux-scripts.git "$loc_git/linux-scripts"
     
     echo "The sudo timeout will be set to 15 minutes. It will be reset once the script has finished"
     sudo chown root:root "$loc_repo_os/configuration/extend_sudo_timeout" 
@@ -146,8 +149,7 @@ Main ()
         git push origin master
         cd "$user_home"
     bash "$loc_bashrc_aliases"
-    echo "$Don\'t select linux-scripts or os-setup, they have already been cloned"
-    bash "$loc_clone_repos"
+    source "$loc_repo/clone_repos.sh"
     configuration
     cleanup
 }
