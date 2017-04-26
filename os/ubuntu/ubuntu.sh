@@ -118,9 +118,6 @@ cleanup ()
 
 Main ()
 {
-    source "$loc_repo/sens_variables.sh"
-    source "$loc_repo/variables.sh"
-
     git clone git@github.com:thorpj/linux-scripts.git "$loc_git/linux-scripts"
     
     echo "The sudo timeout will be set to 15 minutes. It will be reset once the script has finished"
