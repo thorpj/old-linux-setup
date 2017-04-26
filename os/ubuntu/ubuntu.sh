@@ -1,5 +1,4 @@
 #!/bin/bash
-pwd
 
 # if [[ $(/usr/bin/id -u) -ne 0 ]]; then
 #     echo "Exiting. Please run script as root"
@@ -63,7 +62,7 @@ app_install ()
         if [ "$apt_app" = "#===non_apt===" ]; then
             break
         fi
-        if [[ "${apt_app:0:1}" == "#" ]] || [[ "${file:0:1}" == "" ]; then
+        if [[ "${apt_app:0:1}" == "#" ]] || [[ "${file:0:1}" == "" ]]; then
             continue
         else
             sudo apt-get install -y "$apt_app"
