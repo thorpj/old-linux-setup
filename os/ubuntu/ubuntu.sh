@@ -79,6 +79,7 @@ app_install ()
             app_installed_log "$app"
         fi
     done
+}
 
 gnome_extensions_install ()
 {
@@ -92,20 +93,17 @@ gnome_extensions_install ()
 configuration ()
 {
     gsettings_list=$'\n' read -d '' -r -a gsettings < "$loc_repo_os/configuration/gsettings/$ubuntu_codename"
-    if [ ! -f "$loc_repo_os/configuration/gsettings/$ubuntu_codename" ]
-        then
-            log_entry "It is not possible to import gsettings because a configuration file for your version of Ubuntu does not exist"
-        else
-            for gsetting in "${gsettings[@]}"
-                do
-                    gsettings set $gsetting
-                done
+    if [ ! -f "$loc_repo_os/configuration/gsettings/$ubuntu_codename" ]; then
+        log_entry "It is not possible to import gsettings because a configuration file for your version of Ubuntu does not exist"
+    else
+        for gsetting in "${gsettings[@]}"; do
+            gsettings set $gsetting
+        done
     fi
-    if [ ! -f "$loc_repo_os/configuration/dconf/$ubuntu_codename" ]
-        then
-            dconf load / < "$loc_repo_os/configuration/dconf/$ubuntu_codename"
-        else
-            log_entry "It is not possible to import dconf settings because a configuration file for your version of Ubuntu does not exist"
+    if [ ! -f "$loc_repo_os/configuration/dconf/$ubuntu_codename" ]; then
+        dconf load / < "$loc_repo_os/configuration/dconf/$ubuntu_codename"
+    else
+        log_entry "It is not possible to import dconf settings because a configuration file for your version of Ubuntu does not exist"
     fi
 
 }
