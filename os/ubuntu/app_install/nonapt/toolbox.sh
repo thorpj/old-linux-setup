@@ -1,10 +1,5 @@
 #!/bin/bash
 set -e
-if [[ $(/usr/bin/id -u) -ne 0 ]]; then
-    echo "Exiting. Please run script as root"
-    exit
-fi
-
 #Installing dependencies
 sudo apt-get install -y openjdk-7-jdk git
 

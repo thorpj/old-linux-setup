@@ -17,7 +17,6 @@ htop
 playonlinux
 steam
 nautilus-dropbox
-google-chrome-stable
 pm-utils
 virtualbox-5.1
 ubuntu-restricted-extras
@@ -38,3 +37,4 @@ wps-office
 libs-x86
 tmux
 albert
+google-chrome-stable

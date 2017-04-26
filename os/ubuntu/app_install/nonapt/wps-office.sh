@@ -1,9 +1,4 @@
 #!/bin/bash
-if [[ $(/usr/bin/id -u) -ne 0 ]]; then
-    echo "Exiting. Please run script as root"
-    exit
-fi
-
 dldir="$user_home/.temp/"
 
 dep_error="no"

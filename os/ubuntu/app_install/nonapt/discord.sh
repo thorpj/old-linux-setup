@@ -1,9 +1,6 @@
 #!/bin/bash
 set -e
-if [[ $(/usr/bin/id -u) -ne 0 ]]; then
-    echo "Exiting. Please run script as root"
-    exit
-fi
+
 url="https://discordapp.com/api/download?platform=linux&format=deb"
 
 full_file_name="$0"

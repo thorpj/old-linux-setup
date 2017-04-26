@@ -10,8 +10,6 @@ sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 614C4B38
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
-# google-chrome-stable
-wget -O- https://dl.google.com/linux/linux_signing_key.pub | bash
 # virtualbox
 wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
 # libreoffice
