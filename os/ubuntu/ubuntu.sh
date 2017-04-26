@@ -105,7 +105,7 @@ configuration ()
     else
         log_entry "It is not possible to import dconf settings because a configuration file for your version of Ubuntu does not exist"
     fi
-
+    source "$loc_git_os/configuration/change_background.sh"
 }
 
 cleanup ()
