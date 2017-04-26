@@ -1,4 +1,4 @@
-# Setup-OS
+# linux-setup
 Scripts to set up a device after a fresh Linux install
 
 ## Usage
