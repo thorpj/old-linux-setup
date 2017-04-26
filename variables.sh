@@ -11,12 +11,13 @@ device_name="SB-UB174-1" # options: See https://freedcamp.com/Misc_2yL/Device_Ma
 device_type="laptop"
 os_name="ubuntu" # options: ubuntu
 ssh_key_name="$device_name"
+is_wsl="yes"
 loc_wsl_repos="/mnt/c"
 
 # Repo locations
 loc_repo="/home/$USER/git/linux-setup"
 loc_repo_os="$loc_repo/os/$os_name"
-loc_extend_sudo_timeout="$loc_repo/"
+loc_extend_sudo_timeout="$loc_repo_os/configuration/extend_sudo_timeout"
 loc_logfile="$loc_repo_os/log.log"
 loc_authorized_keys_list="$loc_repo/authorized_keys.txt"
 loc_app_install_dir="$loc_repo_os/app_install"
