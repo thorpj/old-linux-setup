@@ -1,0 +1,16 @@
+linux-setup git
+linux-scripts git
+Windows-Scripts git
+os_init git
+learn_ps unigit
+proj_algorithms git
+sc_reddit_bot git
+setup_server git
+comp1001 unigit
+dir_cleanup git
+project_euler unigit
+math1020 unigit
+learn_c_thw unigit
+file_templates git
+AHK-Scripts git
+learn_python_thw unigit
