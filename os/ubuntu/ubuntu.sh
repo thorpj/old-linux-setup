@@ -73,7 +73,7 @@ app_install ()
         if [[ "${app:0:1}" == "#" ]] || [[ "${app:0:1}" == "" ]]; then
             continue
         else
-            sudo bash "$loc_app_list/nonapt/$app"
+            source "$loc_app_list/nonapt/$app"
             app_installed_log "$app"
         fi
     done
