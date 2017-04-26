@@ -49,8 +49,6 @@ log_entry ()
 
 app_install ()
 {
-    
-    
     # Add sources for apt
     sed -i "s|ubuntu_codename|$ubuntu_codename|g" "$loc_app_install_dir/apt/sources.txt"
     sudo mv "$loc_app_install_dir/apt/sources.txt" "/etc/apt/sources.list"
@@ -146,6 +144,7 @@ Main ()
         git commit -m "adding public key for $device_name"
         git push origin master
         cd "$user_home"
+    fi
     bash "$loc_bashrc_aliases"
     source "$loc_repo/clone_repos.sh"
     configuration
