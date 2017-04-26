@@ -77,6 +77,7 @@ app_install ()
         else
             sudo bash "$loc_app_list/nonapt/$app"
             app_installed_log "$app"
+        fi
     done
 
 gnome_extensions_install ()
