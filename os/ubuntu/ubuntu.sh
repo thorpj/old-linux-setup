@@ -1,10 +1,10 @@
 #!/bin/bash
 pwd
 
-if [[ $(/usr/bin/id -u) -ne 0 ]]; then
-    echo "Exiting. Please run script as root"
-    exit
-fi
+# if [[ $(/usr/bin/id -u) -ne 0 ]]; then
+#     echo "Exiting. Please run script as root"
+#     exit
+# fi
 rm "$loc_logfile"
 touch "$loc_logfile"
 
