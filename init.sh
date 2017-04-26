@@ -43,6 +43,7 @@ initial_setup ()
 main ()
 {
     wget https://raw.githubusercontent.com/thorpj/linux-setup/master/variables.sh -P $HOME
+    sleep 2s
     source $HOME/sens_variables.sh
     source $HOME/variables.sh
     initial_setup
