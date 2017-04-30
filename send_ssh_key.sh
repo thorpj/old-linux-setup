@@ -90,7 +90,7 @@ ssh_key_setup ()
 {
     if [ -z "$github_token" ] || [ -z "$device_name" ] || [ -z "$os_name" ] || [ -z "$github_user" ] || [ -z "$github_email" ] || [ -z "$user_name" ] || [ -z "$ssh_key_name" ]; then
         echo "===== SSH Key Setup ====="
-        read -p "Personal access token" github_token
+        read -p "Personal access token: " github_token
         read -p "Device name (HW): " device_name
         read -p "OS: " os_name
         user_name="$USER"
